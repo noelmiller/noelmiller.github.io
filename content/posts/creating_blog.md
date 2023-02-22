@@ -4,8 +4,6 @@ Category: Review
 Tags: python, css, html
 ### Hello World!
 
-Hello from my first Statiq page.
-
 ```yaml
 ---
 - name: Update web servers
