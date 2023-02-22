@@ -24,14 +24,12 @@
 {% block content %}
   <header>
     <h2 class="entry-title">
-      <a style="text-decoration: none; color: #FFFFFF" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+      <a style="text-decoration: none;" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
          title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
  {% import 'translations.html' as translations with context %}
  {{ translations.translations_for(article) }}
   </header>
-  <article style="margin-top: 0; padding: 25px">
     {{ article.content }}
-  </article>
     <footer class="post-info">
     <time class="published" datetime="{{ article.date.isoformat() }}">
       {{ article.locale_date }}
