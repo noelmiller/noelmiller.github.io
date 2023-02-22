@@ -2,7 +2,7 @@ Title: Creating a Blog and Custom Theme Using Pelican
 Date: 2023-02-22 22:30
 Category: Review
 Tags: python, css, html
-### Hello Blog!
+### Hello Blog!!
 
 ```yaml
 ---
