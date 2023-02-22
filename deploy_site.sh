@@ -1,6 +1,9 @@
 #!/bin/bash
 domain="noelmiller.dev"
-rm -r ./output
-pelican content
-ghp-import -c $domain ./output -b gh-pages
-git push origin gh-pages
+date=$(date '+%Y-%m-%d %H:%M')
+rm -r ./docs
+pelican content -o ./docs
+cp ./CNAME ./docs
+git add .
+git commit -m "deploy site $(date '+%Y-%m-%d %H:%M')"
+git push origin main
