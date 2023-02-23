@@ -6,8 +6,8 @@
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/theme/css/pico.min.css" />
-        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" />
+        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pico.min.css" />
+        <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/custom.css" />
         <script src="https://kit.fontawesome.com/44040beaf0.js" crossorigin="anonymous"></script>
         {% if FEED_ALL_ATOM %}
         <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
@@ -42,7 +42,7 @@
   <section style="margin-bottom:2.5em">
     <nav>
   <ul>
-    <li><strong><a href="/" style="font-size:xx-large">noelmiller.dev</a></strong></li>
+    <li><strong><a href="{{ SITEURL }}/" style="font-size:xx-large">noelmiller.dev</a></strong></li>
     <li id="fadeshow1">>| coding, IT, and music |<</li>
   </ul>
   <ul>
@@ -53,10 +53,10 @@
 </nav>
 <nav>
     <ul>
-    <li><a href="/pages/about" role="button">about</a></li>
-    <li><a href="/pages/projects" role="button">projects</a></li>
-    <li><a href="/pages/resume" role="button">resume</a></li>
-    <li><a href="/pages/contact" role="button">contact</a></li>
+    <li><a href="{{ SITEURL }}/pages/about" role="button">about</a></li>
+    <li><a href="{{ SITEURL }}/pages/projects" role="button">projects</a></li>
+    <li><a href="{{ SITEURL }}/pages/resume" role="button">resume</a></li>
+    <li><a href="{{ SITEURL }}/pages/contact" role="button">contact</a></li>
     </ul>
 </nav>
     <p></p>
