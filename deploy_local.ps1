@@ -1,3 +1,3 @@
 Remove-Item -Recurse .\output
 pelican content
-pelican --listen
+pelican --autoreload --listen
