@@ -17,11 +17,11 @@
 }
 
 h2.entry-title {
-  margin-bottom: 0.5em;
+  padding: auto;
 }
 
 header h2.entry-title {
-  padding-top: 2.5em;
+
 }
 
 h2, h3, h4, h5, h6 {
@@ -44,6 +44,24 @@ article.hentry {
   margin-top: 0; 
   margin-bottom:1.5em; 
   padding: 25px;
+  border-radius: 20px;
+}
+
+article.page {
+  margin-top: 5em; 
+  padding-top: 1em;
+  border-radius: 20px;
+}
+
+article.article {
+  margin-top: 5em; 
+  padding-top: 1em;
+  border-radius: 20px;
+}
+
+article.article footer div#post-info {
+ text-align: left;
+ margin: auto;
 }
 
 main.container {
@@ -69,7 +87,6 @@ section#nav {
 
   h1.page-title {
     margin-bottom: 0.75em; 
-    padding-top: 2.5em;
   }
 
 @media only screen and (max-width: 1107px) {
@@ -98,6 +115,23 @@ header h2.entry-title {
 }
 div.grid {
   position: absolute;
+}
+
+article.page {
+  margin-top: 9em; 
+  padding-top: 1em;
+  border-radius: 20px;
+}
+
+h1.page-title {
+  padding:0;
+  margin-bottom: 0.75em; 
+}
+
+article.article {
+  margin-top: 9em; 
+  padding-top: 1em;
+  border-radius: 20px;
 }
 }
 
