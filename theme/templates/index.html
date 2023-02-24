@@ -5,7 +5,7 @@
 {% block content_title %}
 {% endblock %}
 <section id="content">
-
+<div id="main-page">
     <ol id="post-list">
         {% for article in articles_page.object_list %}
         <li style="list-style-type: none">
@@ -23,6 +23,7 @@
         </li>
         {% endfor %}
     </ol>
+</div>
     {% if articles_page.has_other_pages() %}
     {% include 'pagination.html' %}
     {% endif %}
