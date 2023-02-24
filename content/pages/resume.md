@@ -1,2 +1,0 @@
-Title: Resume
-## Hello Resume!
