@@ -9,7 +9,7 @@
     <ol id="post-list">
         {% for article in articles_page.object_list %}
         <li style="list-style-type: none">
-            <article class="hentry" style="margin-top: 0; margin-bottom:1.5em; padding: 25px">
+            <article class="hentry">
                 <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
                         title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
                 <div style="margin-bottom: 1em" class="entry-content"><strong>{{ article.description }}</strong> </div>
