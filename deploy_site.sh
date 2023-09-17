@@ -5,5 +5,5 @@ rm -r ./docs
 pelican content -o ./docs
 cp ./CNAME ./docs
 git add .
-git commit -m "deploy site $(date '+%Y-%m-%d %H:%M')"
+git commit
 git push origin main
