@@ -1,10 +1,51 @@
 Title: About
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse in est ante in nibh. Leo integer malesuada nunc vel risus. Sed augue lacus viverra vitae congue eu consequat. Pharetra pharetra massa massa ultricies mi quis hendrerit. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Cras ornare arcu dui vivamus arcu felis bibendum ut tristique. Nam aliquam sem et tortor consequat id porta nibh venenatis. Sit amet facilisis magna etiam tempor orci eu lobortis. Semper auctor neque vitae tempus quam pellentesque. Amet nulla facilisi morbi tempus iaculis urna. Tempor orci eu lobortis elementum nibh tellus. Cursus euismod quis viverra nibh cras pulvinar mattis. Habitasse platea dictumst vestibulum rhoncus est pellentesque.
 
-Ullamcorper morbi tincidunt ornare massa eget egestas purus. Eget est lorem ipsum dolor sit amet. Suspendisse sed nisi lacus sed viverra tellus. Magna sit amet purus gravida quis blandit turpis. Convallis convallis tellus id interdum velit laoreet id donec. Pellentesque diam volutpat commodo sed egestas. Dui ut ornare lectus sit amet est placerat. Tellus integer feugiat scelerisque varius morbi enim. Maecenas ultricies mi eget mauris pharetra et. Nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus. Amet risus nullam eget felis eget nunc lobortis.
+### TLDR
+Hello, my name is Noel Miller! This is my personal blog where I will be writing about my various projects and other things I am interested in. My primary interests are IT, coding, and music. The topics may expand outside of these areas depending on what I am interested in at any given time.
 
-Commodo quis imperdiet massa tincidunt. Curabitur gravida arcu ac tortor. Diam vulputate ut pharetra sit amet aliquam. Donec ultrices tincidunt arcu non sodales neque sodales ut etiam. Pellentesque sit amet porttitor eget. Vel quam elementum pulvinar etiam non quam. Arcu risus quis varius quam quisque. Cursus metus aliquam eleifend mi in nulla posuere sollicitudin aliquam. Dui ut ornare lectus sit amet est placerat. Leo vel fringilla est ullamcorper eget. Faucibus et molestie ac feugiat sed lectus vestibulum mattis. Lorem ipsum dolor sit amet. Quam elementum pulvinar etiam non quam. Lacus laoreet non curabitur gravida arcu ac tortor. Semper feugiat nibh sed pulvinar proin gravida hendrerit. Maecenas sed enim ut sem.
+### What is my day job?
+I currently work for [Red Hat](https://www.redhat.com/en) as a Cleared Maintenance Engineer (CME) Technical Account Manager (TAM). It's a bit of a mouthful, easiest to shorten my title to CME TAM or Senior Consultant. My primary focus in my day job is helping my customer with anything related to Red Hat Enterprise Linux or Ansible Automation Platform. See my [LinkedIn](https://www.linkedin.com/in/noel-miller-533909113/) for my full resume.
 
-Vel eros donec ac odio tempor orci dapibus ultrices in. Sit amet aliquam id diam maecenas. Id aliquet risus feugiat in ante metus dictum at tempor. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Proin sagittis nisl rhoncus mattis rhoncus urna. Suspendisse potenti nullam ac tortor vitae. Neque sodales ut etiam sit amet nisl purus in mollis. Lectus nulla at volutpat diam ut venenatis tellus. Cursus eget nunc scelerisque viverra mauris in aliquam sem. Amet justo donec enim diam. Viverra adipiscing at in tellus integer feugiat scelerisque varius morbi. Est lorem ipsum dolor sit amet consectetur adipiscing elit.
+### Professional Interests
 
-Semper auctor neque vitae tempus quam. Auctor eu augue ut lectus arcu bibendum at varius. Cum sociis natoque penatibus et magnis. Quam viverra orci sagittis eu volutpat odio facilisis mauris. Urna porttitor rhoncus dolor purus non enim praesent. Nisi lacus sed viverra tellus in hac habitasse platea. Vel fringilla est ullamcorper eget nulla facilisi etiam. Amet commodo nulla facilisi nullam vehicula ipsum a arcu. At in tellus integer feugiat scelerisque varius morbi enim nunc. Sollicitudin ac orci phasellus egestas. Cursus euismod quis viverra nibh cras. Fringilla urna porttitor rhoncus dolor. Volutpat maecenas volutpat blandit aliquam etiam. Nec sagittis aliquam malesuada bibendum arcu vitae.
+#### Information Technology
+I have been working in IT for about 9 years now. I have gained most of my experience through working at various Managed Service Providers. I have been a Linux User since 2012 and my favorite distribution is Fedora. Though my preference is Fedora, I have used Ubuntu, Debian, OpenSuse, Arch Linux, Solus, and many other distros as a daily driver. 
+
+##### What am I interested in?
+- Ansible 
+- Immutable Linux Distributions 
+    - [Fedora Silverblue](https://fedoraproject.org/silverblue/)
+    - [Fedora CoreOS](https://fedoraproject.org/coreos/)
+- Containers
+- Openshift (Kubernetes)
+
+#### Programming
+I am by no means a professional programmer, but I do have an interest in trying to solve problems by hacking scripts together. The languages I primarily use are Bash and Python. I would like to improve my skills with python since Ansible is programmed using Python. I have written a fair amount of Ansible Playbooks as well to automate all sorts of things.
+
+#### Home Lab
+I do have a home lab! It is probably not as fancy as some others have, but it works well enough for my purposes! I will likely do a blog post on this soon about the current state of my home lab. I will likely do an update each year of how it progresses, but no promises!
+
+### Personal Interests
+
+#### Video Games
+I have been playing video games since I was a young kid. I primarily play games on PC these days. 
+
+##### What am I playing?
+- Final Fantasy XIV (Playing through Heavensward currently)
+- PlateUp
+- Baldur's Gate 3
+
+##### Favorite Games
+- Halo 2
+- Super Smash Brothers Melee
+- Dark Souls 3
+- Elden Ring
+- The Elder Scrolls V: Skyrim
+
+#### Music
+I enjoy both playing and listening to metal music. (I enjoy more genres than just metal, but it is my favorite). I still have not released any music as a solo artist, but I am hoping to release some music soon<sup>TM</sup>.
+
+##### Favorite Bands
+- [Obsequaie](https://open.spotify.com/artist/5KwdkxxLA3mR8dxpzauigT)
+- [Falls of Rauros](https://open.spotify.com/artist/4Y5CKbAT8fHWEbpLGFNygB)
+- [Dissection](https://open.spotify.com/artist/4Y5CKbAT8fHWEbpLGFNygB)
