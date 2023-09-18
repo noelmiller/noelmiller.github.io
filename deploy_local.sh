@@ -1,4 +1,4 @@
 #!/bin/bash
 rm -r output
-pelican content
+pelican content 
 pelican --listen --autoreload
