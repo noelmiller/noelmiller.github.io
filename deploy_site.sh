@@ -2,7 +2,7 @@
 domain="noelmiller.dev"
 date=$(date '+%Y-%m-%d %H:%M')
 rm -r ./docs
-pelican content -o ./docs
+pelican content -s publishconf.py -o ./docs
 cp ./CNAME ./docs
 git add .
 git commit
