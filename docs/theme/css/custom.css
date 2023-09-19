@@ -84,14 +84,14 @@ section#nav {
   background-color:#0b1014;
 }
 
-  h1.page-title {
+h1.page-title {
     margin-bottom: 0.75em;
-  }
-  h1.author-category-tags-title {
+}
+h1.author-category-tags-title {
     margin-bottom: 0.75em;
     padding-top: 2.5em;
     padding-left: 0.6em;
-  }
+}
 
 @media only screen and (max-width: 1107px) {
   #fadeshow1 {
@@ -138,6 +138,7 @@ article.article {
   border-radius: 20px;
 }
 
+
 h1.author-category-tags-title {
   margin-bottom: 0.75em;
   padding-top: 4.8em;
@@ -152,4 +153,25 @@ h1.author-category-tags-title {
 }
 html {
   scroll-behavior: smooth;
+}
+
+.toc {
+    display: table;
+    width: auto;
+}
+
+/* TOC heading in bold */
+.toc .toctitle {
+    font-weight: bold;
+}
+
+/* No bullets for toc list, indentation of nested lists 1em */
+.toc ul {
+    list-style-type: none;
+    padding-left: 1rem;
+    margin-bottom: 0.75em;
+}
+
+article.article h3 {
+  margin-top: 0.75em;
 }

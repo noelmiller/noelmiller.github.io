@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <title>How to Create a Blog!</title>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Pelican" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://noelmiller.dev/theme/css/pico.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://noelmiller.dev/theme/css/custom.css" />
+  <link rel="stylesheet" type="text/css" href="https://noelmiller.dev/theme/css/pygments.css" />
+  <script src="https://kit.fontawesome.com/44040beaf0.js" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "fywvaqjh8l");
+  </script>
+  <link
+    href="https://noelmiller.dev/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate" title="noelmiller.dev Full Atom Feed" />
+  <link
+    href="https://noelmiller.dev/feeds/programming.atom.xml"
+    type="application/atom+xml" rel="alternate" title="noelmiller.dev Categories Atom Feed" />
+
+
+
+<meta name="description" content="Creating a Blog and Custom Theme Using Pelican" />
+
+<meta name="tags" content="python" />
+<meta name="tags" content="css" />
+<meta name="tags" content="html" />
+
+</head>
+
+<body>
+  <main class="container">
+    <div class="grid">
+      <section id="nav">
+        <nav class="navbar">
+          <ul>
+            <li><strong><a href="https://noelmiller.dev/" style="font-size:xx-large; padding-bottom:0">noelmiller.dev </a></strong></li>
+            <li id="fadeshow1">&gt;| coding, IT, and music |&lt;</li>
+            <li id="fadeshow2"><a class="outline" href="https://noelmiller.dev/pages/about" role="button">about</a></li>
+            <li id="fadeshow2"><a class="outline" href="https://noelmiller.dev/pages/projects" role="button">projects</a></li>
+            <li id="fadeshow2"><a class="outline" href="https://noelmiller.dev/pages/music" role="button">music</a></li>
+            <li id="fadeshow2"><a class="outline" href="https://noelmiller.dev/pages/contact" role="button">contact</a></li>
+	    <li>
+	      <details role="list" dir="rtl">
+	        <summary aria-haspopup="listbox" role="link"><i class="fa-brands fa-github-alt fa-2x"></i></summary>
+		<ul role="listbox">
+		  <li><a href="https://github.com/noelmiller">Github</a></li>
+		  <li><a href="https://gitlab.com/noelmiller">GitLab</a></li>
+		  <li><a href="https://git.henrymillerfrazier.com/noel">Personal Git</a></li>
+		</ul>
+	      </details>
+	    </li>
+          </ul>
+        </nav>
+        <nav class="navbar" id="fadeshow3">
+          <ul>
+          <li><a class="outline" href="https://noelmiller.dev/pages/about" role="button">about</a></li>
+          <li><a class="outline" href="https://noelmiller.dev/pages/projects" role="button">projects</a></li>
+          <li><a class="outline" href="https://noelmiller.dev/pages/music" role="button">music</a></li>
+          <li><a class="outline" href="https://noelmiller.dev/pages/contact" role="button">contact</a></li>
+        </ul>
+        </nav>
+    </div>
+    </section>
+<article class="article">
+  <h2 class="entry-title">
+    <a style="text-decoration: none;" href="https://noelmiller.dev/how-to-create-a-blog.html" rel="bookmark"
+      title="Permalink to How to Create a Blog!">How to Create a Blog!</a></h1>
+    
+<hr>
+<h3 id="tldr">TLDR</h3>
+<p><a href="https://getpelican.com/">Pelican</a> is a static site generator (built on python) that I have seen primarily used to create blogs. It is the project I used to build this site. Source code for this site is available <a href="https://github.com/noelmiller/noelmiller.github.io">here</a>.</p>
+<div class="toc"><span class="toctitle">Table of Contents</span><ul>
+<li><a href="#tldr">TLDR</a></li>
+<li><a href="#what-is-pelican">What is Pelican?</a></li>
+<li><a href="#pelican-site-architecture">Pelican Site Architecture</a></li>
+</ul>
+</div>
+<hr>
+<h3 id="what-is-pelican">What is <a href="https://getpelican.com/">Pelican</a>?</h3>
+<p><em>Pelican is a static site generator that requires no database or server-side logic.</em> I definitely think that it lives up to it's description from the creators! It is fairly easy to use and their <a href="https://docs.getpelican.com/en/latest/">documentation</a> is solid! </p>
+<p>Pelican will ingest either reStructuredText or Markdown and create HTML output in a directory you specify! This is great for having an easy way to write blog posts without having to do all of the HTML markup by hand. It will output this HTML with styling through a theme you have constructed (or you can use an existing theme someone else has created). This helps with keeping your blog designed consistently in every post or page. </p>
+<p>There are other competing static site generators (see <a href="https://jamstack.org/generators/">here</a> for a nice list of them), but Pelican seemed the most straight forward to me! It is also built on python which is the programming language I am the most familiar working with!</p>
+<h3 id="pelican-site-architecture"><a href="https://getpelican.com/">Pelican</a> Site Architecture</h3>
+<div class="highlight"><pre><span></span><code>.
+├──<span class="w"> </span>content
+│<span class="w">   </span>├──<span class="w"> </span>images
+│<span class="w">   </span>├──<span class="w"> </span>pages
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>about.md
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>contact.md
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>music.md
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>projects.md
+│<span class="w">   </span>└──<span class="w"> </span>posts
+│<span class="w">       </span>└──<span class="w"> </span>how-to-create-a-blog.md
+├──<span class="w"> </span>create_post.py
+├──<span class="w"> </span>docs
+│<span class="w">   </span>├──<span class="w"> </span>archives.html
+│<span class="w">   </span>├──<span class="w"> </span>author
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>noel-miller.html
+│<span class="w">   </span>├──<span class="w"> </span>authors.html
+│<span class="w">   </span>├──<span class="w"> </span>categories.html
+│<span class="w">   </span>├──<span class="w"> </span>category
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>programming.html
+│<span class="w">   </span>├──<span class="w"> </span>CNAME
+│<span class="w">   </span>├──<span class="w"> </span>feeds
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>all.atom.xml
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>programming.atom.xml
+│<span class="w">   </span>├──<span class="w"> </span>how-to-create-a-blog.html
+│<span class="w">   </span>├──<span class="w"> </span>index.html
+│<span class="w">   </span>├──<span class="w"> </span>pages
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>about.html
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>contact.html
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>music.html
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>projects.html
+│<span class="w">   </span>├──<span class="w"> </span>tag
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>css.html
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>html.html
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>python.html
+│<span class="w">   </span>├──<span class="w"> </span>tags.html
+│<span class="w">   </span>└──<span class="w"> </span>theme
+│<span class="w">       </span>└──<span class="w"> </span>css
+│<span class="w">           </span>├──<span class="w"> </span>custom.css
+│<span class="w">           </span>├──<span class="w"> </span>pico.min.css
+│<span class="w">           </span>├──<span class="w"> </span>pico.min.css.map
+│<span class="w">           </span>├──<span class="w"> </span>postcss.config.js
+│<span class="w">           </span>└──<span class="w"> </span>pygments.css
+├──<span class="w"> </span>Makefile
+├──<span class="w"> </span>output
+│<span class="w">   </span>├──<span class="w"> </span>archives.html
+│<span class="w">   </span>├──<span class="w"> </span>author
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>noel-miller.html
+│<span class="w">   </span>├──<span class="w"> </span>authors.html
+│<span class="w">   </span>├──<span class="w"> </span>categories.html
+│<span class="w">   </span>├──<span class="w"> </span>category
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>programming.html
+│<span class="w">   </span>├──<span class="w"> </span>creating-a-blog-and-custom-theme-using-pelican.html
+│<span class="w">   </span>├──<span class="w"> </span>index.html
+│<span class="w">   </span>├──<span class="w"> </span>pages
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>about.html
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>contact.html
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>music.html
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>projects.html
+│<span class="w">   </span>├──<span class="w"> </span>tag
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>css.html
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>html.html
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>python.html
+│<span class="w">   </span>├──<span class="w"> </span>tags.html
+│<span class="w">   </span>└──<span class="w"> </span>theme
+│<span class="w">       </span>└──<span class="w"> </span>css
+│<span class="w">           </span>├──<span class="w"> </span>custom.css
+│<span class="w">           </span>├──<span class="w"> </span>pico.min.css
+│<span class="w">           </span>├──<span class="w"> </span>pico.min.css.map
+│<span class="w">           </span>├──<span class="w"> </span>postcss.config.js
+│<span class="w">           </span>└──<span class="w"> </span>pygments.css
+├──<span class="w"> </span>pelicanconf.py
+├──<span class="w"> </span>publishconf.py
+├──<span class="w"> </span>README.md
+├──<span class="w"> </span>requirements.txt
+├──<span class="w"> </span>templates
+│<span class="w">   </span>└──<span class="w"> </span>standard_post_template.md
+└──<span class="w"> </span>theme
+<span class="w">    </span>├──<span class="w"> </span>static
+<span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>css
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>custom.css
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>pico.min.css
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>pico.min.css.map
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>postcss.config.js
+<span class="w">    </span>│<span class="w">       </span>└──<span class="w"> </span>pygments.css
+<span class="w">    </span>└──<span class="w"> </span>templates
+<span class="w">        </span>├──<span class="w"> </span>archives.html
+<span class="w">        </span>├──<span class="w"> </span>article.html
+<span class="w">        </span>├──<span class="w"> </span>author.html
+<span class="w">        </span>├──<span class="w"> </span>authors.html
+<span class="w">        </span>├──<span class="w"> </span>base.html
+<span class="w">        </span>├──<span class="w"> </span>categories.html
+<span class="w">        </span>├──<span class="w"> </span>category.html
+<span class="w">        </span>├──<span class="w"> </span>gosquared.html
+<span class="w">        </span>├──<span class="w"> </span>index.html
+<span class="w">        </span>├──<span class="w"> </span>page.html
+<span class="w">        </span>├──<span class="w"> </span>pagination.html
+<span class="w">        </span>├──<span class="w"> </span>period_archives.html
+<span class="w">        </span>├──<span class="w"> </span>tag.html
+<span class="w">        </span>├──<span class="w"> </span>tags.html
+<span class="w">        </span>└──<span class="w"> </span>translations.html
+</code></pre></div>
+<footer class="post-info">
+  <div id="post-info">
+  <time class="published" datetime="2023-09-18T00:00:00-05:00">
+    >| Mon 18 September 2023
+  </time>
+  <address style="display:inline-block" class="vcard author">
+    |     <a class="url fn" href="https://noelmiller.dev/author/noel-miller.html">Noel Miller</a>
+  </address>
+  <div style="display: inline-block" class="category">
+    | Category: <a href="https://noelmiller.dev/category/programming.html">Programming</a>
+  </div>
+  <div style="display: inline-block" class="tags">
+    | Tags:
+    <a href="https://noelmiller.dev/tag/python.html">python</a>
+    <a href="https://noelmiller.dev/tag/css.html">css</a>
+    <a href="https://noelmiller.dev/tag/html.html">html</a>
+ |< </div>
+    </div>
+</footer><!-- /.post-info -->
+</article>
+  </main>
+</body>
+
+</html>
