@@ -11,6 +11,7 @@ date = current_datetime.strftime("%Y-%m-%d")
 
 questions = [
     inquirer.Text("title", message="What is the name of the article?"),
+    inquirer.Text("description", message="In summary, what is the article about?"),
     inquirer.List("category", message="What Category is the article?", choices=["Programming", "IT", "Music", "Gaming"]),
     inquirer.Text("tags", message="Please enter a comma separated list of tags")
 ]
@@ -24,7 +25,8 @@ content = template.render(
     title=answers['title'],
     date=date,
     category=answers['category'],
-    tags=answers['tags']
+    tags=answers['tags'],
+    description=answers['description']
 )
 filepath = "./content/posts/" + slugify(answers['title']) + ".md"
 with open(filepath, mode="w", encoding="utf-8") as post:
