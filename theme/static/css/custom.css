@@ -69,7 +69,7 @@ main.container {
 }
 
 div.grid {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -116,9 +116,6 @@ div#main-page ol#post-list {
 
 header h2.entry-title {
   padding-top: 5.2em;
-}
-div.grid {
-  position: absolute;
 }
 
 article.page {
@@ -167,9 +164,12 @@ html {
 
 /* No bullets for toc list, indentation of nested lists 1em */
 .toc ul {
-    list-style-type: none;
     padding-left: 1rem;
     margin-bottom: 0.75em;
+}
+
+.toc ul li {
+    list-style-type: disclosure-closed;
 }
 
 article.article h3 {
