@@ -21,7 +21,7 @@
     href="https://noelmiller.dev/feeds/all.atom.xml"
     type="application/atom+xml" rel="alternate" title="noelmiller.dev Full Atom Feed" />
   <link
-    href="https://noelmiller.dev/feeds/programming.atom.xml"
+    href="https://noelmiller.dev/feeds/coding.atom.xml"
     type="application/atom+xml" rel="alternate" title="noelmiller.dev Categories Atom Feed" />
 
 
@@ -41,7 +41,7 @@
         <nav class="navbar">
           <ul>
             <li><strong><a href="https://noelmiller.dev/" style="font-size:xx-large; padding-bottom:0">noelmiller.dev </a></strong></li>
-            <li id="fadeshow1">&gt;| coding, IT, and music |&lt;</li>
+            <li id="fadeshow1">&gt;| coding, IT, gaming, and music |&lt;</li>
             <li id="fadeshow2"><a class="outline" href="https://noelmiller.dev/pages/about" role="button">about</a></li>
             <li id="fadeshow2"><a class="outline" href="https://noelmiller.dev/pages/projects" role="button">projects</a></li>
             <li id="fadeshow2"><a class="outline" href="https://noelmiller.dev/pages/music" role="button">music</a></li>
@@ -79,7 +79,31 @@
 <div class="toc"><span class="toctitle">Table of Contents</span><ul>
 <li><a href="#tldr">TLDR</a></li>
 <li><a href="#what-is-pelican">What is Pelican?</a></li>
-<li><a href="#pelican-site-architecture">Pelican Site Architecture</a></li>
+<li><a href="#installing-pelican">Installing Pelican</a></li>
+<li><a href="#pelican-site-architecture">Pelican Site Architecture</a><ul>
+<li><a href="#content">content</a></li>
+<li><a href="#docs-or-output">docs (or output)</a></li>
+<li><a href="#pelicanconfpy">pelicanconf.py</a></li>
+<li><a href="#publishconfpy">publishconf.py</a></li>
+<li><a href="#makefile">Makefile</a></li>
+<li><a href="#theme">theme</a></li>
+<li><a href="#requirementstxt-recommended">requirements.txt (recommended)</a></li>
+<li><a href="#create_postpy-optional">create_post.py (optional)</a><ul>
+<li><a href="#dependencies">Dependencies</a></li>
+<li><a href="#usage">Usage</a></li>
+</ul>
+</li>
+<li><a href="#templates-optional">templates (optional)</a></li>
+<li><a href="#readmemd-optional">README.md (optional)</a></li>
+</ul>
+</li>
+<li><a href="#development-environment">Development Environment</a></li>
+<li><a href="#writing-posts">Writing Posts</a></li>
+<li><a href="#configuring-github-pages">Configuring Github Pages</a></li>
+<li><a href="#publishing-posts">Publishing Posts</a><ul>
+<li><a href="#3-step-process">3 step process</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <hr>
@@ -87,7 +111,11 @@
 <p><em>Pelican is a static site generator that requires no database or server-side logic.</em> I definitely think that it lives up to it's description from the creators! It is fairly easy to use and their <a href="https://docs.getpelican.com/en/latest/">documentation</a> is solid! </p>
 <p>Pelican will ingest either reStructuredText or Markdown and create HTML output in a directory you specify! This is great for having an easy way to write blog posts without having to do all of the HTML markup by hand. It will output this HTML with styling through a theme you have constructed (or you can use an existing theme someone else has created). This helps with keeping your blog designed consistently in every post or page. </p>
 <p>There are other competing static site generators (see <a href="https://jamstack.org/generators/">here</a> for a nice list of them), but Pelican seemed the most straight forward to me! It is also built on python which is the programming language I am the most familiar working with!</p>
+<h3 id="installing-pelican">Installing Pelican</h3>
+<p>Here is an excellent <a href="https://docs.getpelican.com/en/latest/install.html">article</a> on how to install pelican. My recommendation would be to use a virtualenv to manage your pelican site.</p>
 <h3 id="pelican-site-architecture"><a href="https://getpelican.com/">Pelican</a> Site Architecture</h3>
+<p>In this section, I will explain the basic architecture of pelican using my site. Here is an excellent <a href="https://docs.getpelican.com/en/latest/install.html#installing-pelican">article</a> from the documentation on how to install pelican as well as some basic information on the <a href="https://docs.getpelican.com/en/latest/install.html#kickstart-your-site">site architecture</a> when you use the <code>pelican-quickstart</code> command.</p>
+<p>The code below is an example of what my folder layout looks like for my <a href="https://github.com/noelmiller/noelmiller.github.io">site</a>:</p>
 <div class="highlight"><pre><span></span><code>.
 ├──<span class="w"> </span>content
 │<span class="w">   </span>├──<span class="w"> </span>images
@@ -131,33 +159,6 @@
 │<span class="w">           </span>├──<span class="w"> </span>postcss.config.js
 │<span class="w">           </span>└──<span class="w"> </span>pygments.css
 ├──<span class="w"> </span>Makefile
-├──<span class="w"> </span>output
-│<span class="w">   </span>├──<span class="w"> </span>archives.html
-│<span class="w">   </span>├──<span class="w"> </span>author
-│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>noel-miller.html
-│<span class="w">   </span>├──<span class="w"> </span>authors.html
-│<span class="w">   </span>├──<span class="w"> </span>categories.html
-│<span class="w">   </span>├──<span class="w"> </span>category
-│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>programming.html
-│<span class="w">   </span>├──<span class="w"> </span>creating-a-blog-and-custom-theme-using-pelican.html
-│<span class="w">   </span>├──<span class="w"> </span>index.html
-│<span class="w">   </span>├──<span class="w"> </span>pages
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>about.html
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>contact.html
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>music.html
-│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>projects.html
-│<span class="w">   </span>├──<span class="w"> </span>tag
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>css.html
-│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>html.html
-│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>python.html
-│<span class="w">   </span>├──<span class="w"> </span>tags.html
-│<span class="w">   </span>└──<span class="w"> </span>theme
-│<span class="w">       </span>└──<span class="w"> </span>css
-│<span class="w">           </span>├──<span class="w"> </span>custom.css
-│<span class="w">           </span>├──<span class="w"> </span>pico.min.css
-│<span class="w">           </span>├──<span class="w"> </span>pico.min.css.map
-│<span class="w">           </span>├──<span class="w"> </span>postcss.config.js
-│<span class="w">           </span>└──<span class="w"> </span>pygments.css
 ├──<span class="w"> </span>pelicanconf.py
 ├──<span class="w"> </span>publishconf.py
 ├──<span class="w"> </span>README.md
@@ -189,16 +190,333 @@
 <span class="w">        </span>├──<span class="w"> </span>tags.html
 <span class="w">        </span>└──<span class="w"> </span>translations.html
 </code></pre></div>
+
+<p>As you can see, there is a lot of files and directories and my site is very small at this point. I will go down the list of top level files and directories one by one to explain their purpose in the architecture of my site.</p>
+<h4 id="content"><a href="https://github.com/noelmiller/noelmiller.github.io/tree/main/content">content</a></h4>
+<p>The purpose of this directory is to store all of your static pages and posts for your site. These will all either be formatted in markdown or reStructuredText. These assets are processed by pelican when you publish your site or run your dev server instance. You will notice both the pages and posts have metadata at the top of the Markdown files. These are used by the processor to categorize and tag posts. I do not have search on my site, but it could be useful if you do want an internal search or categorizing posts in RSS feeds.</p>
+<div class="highlight"><pre><span></span><code>.
+├──<span class="w"> </span>content
+│<span class="w">   </span>├──<span class="w"> </span>images
+│<span class="w">   </span>├──<span class="w"> </span>pages
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>about.md
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>contact.md
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>music.md
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>projects.md
+│<span class="w">   </span>└──<span class="w"> </span>posts
+│<span class="w">       </span>└──<span class="w"> </span>how-to-create-a-blog.md
+</code></pre></div>
+
+<p>For more information, click <a href="https://docs.getpelican.com/en/latest/content.html#writing-content">here</a> for documentation related to writing content.</p>
+<h4 id="docs-or-output"><a href="https://github.com/noelmiller/noelmiller.github.io/tree/main/docs">docs (or output)</a></h4>
+<p>The docs directory is what I use as the output directory for my processed HTML. This is what the user actually sees when they visit my blog. The reason I call it docs as opposed to output is because that is the default directory that Github Pages uses for site assets. You can call this directory whatever you want, I just preferred the ease of use of GitHub Pages to get my blog published for free. One other useful thing to note is the CNAME file. If you want to have a custom domain for your Github pages, you need to have a plain text file called CNAME and the contents are the domain you wish to use. I won't go into detail for every single HTML file it generates, but what it does generate is managed by pelicanconf.py, publishconf.py, and your theme.</p>
+<div class="highlight"><pre><span></span><code>├──<span class="w"> </span>docs
+│<span class="w">   </span>├──<span class="w"> </span>archives.html
+│<span class="w">   </span>├──<span class="w"> </span>author
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>noel-miller.html
+│<span class="w">   </span>├──<span class="w"> </span>authors.html
+│<span class="w">   </span>├──<span class="w"> </span>categories.html
+│<span class="w">   </span>├──<span class="w"> </span>category
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>programming.html
+│<span class="w">   </span>├──<span class="w"> </span>CNAME
+│<span class="w">   </span>├──<span class="w"> </span>feeds
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>all.atom.xml
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>programming.atom.xml
+│<span class="w">   </span>├──<span class="w"> </span>how-to-create-a-blog.html
+│<span class="w">   </span>├──<span class="w"> </span>index.html
+│<span class="w">   </span>├──<span class="w"> </span>pages
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>about.html
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>contact.html
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>music.html
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>projects.html
+│<span class="w">   </span>├──<span class="w"> </span>tag
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>css.html
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>html.html
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>python.html
+│<span class="w">   </span>├──<span class="w"> </span>tags.html
+│<span class="w">   </span>└──<span class="w"> </span>theme
+│<span class="w">       </span>└──<span class="w"> </span>css
+│<span class="w">           </span>├──<span class="w"> </span>custom.css
+│<span class="w">           </span>├──<span class="w"> </span>pico.min.css
+│<span class="w">           </span>├──<span class="w"> </span>pico.min.css.map
+│<span class="w">           </span>├──<span class="w"> </span>postcss.config.js
+│<span class="w">           </span>└──<span class="w"> </span>pygments.css
+</code></pre></div>
+
+<h4 id="pelicanconfpy"><a href="https://github.com/noelmiller/noelmiller.github.io/blob/main/pelicanconf.py">pelicanconf.py</a></h4>
+<p>This file controls how pelican generates your static site. There are several useful items in here. I have kept mine pretty simple, but the main things here are PATH, DEFAULT_PAGINATION, THEME, and MARKDOWN. </p>
+<p>PATH controls where it looks for content to generate the site with. </p>
+<p>DEFAULT_PAGINATION controls how many articles will show up on a page before it will paginate. </p>
+<p>THEME is the path to your theme that you are using. </p>
+<p>MARKDOWN is a useful section to fill out if you want extended markdown support. In my blog, I wanted both Code Highlighting and a Table of Contents feature that can be generated inside of my articles.</p>
+<p>Example from this blog:</p>
+<div class="highlight"><pre><span></span><code><span class="n">AUTHOR</span> <span class="o">=</span> <span class="s1">&#39;Noel Miller&#39;</span>
+<span class="n">SITENAME</span> <span class="o">=</span> <span class="s1">&#39;noelmiller.dev&#39;</span>
+<span class="n">SITEURL</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+<span class="n">PATH</span> <span class="o">=</span> <span class="s1">&#39;content&#39;</span>
+
+<span class="n">TIMEZONE</span> <span class="o">=</span> <span class="s1">&#39;America/Chicago&#39;</span>
+
+<span class="n">DEFAULT_LANG</span> <span class="o">=</span> <span class="s1">&#39;en&#39;</span>
+
+<span class="c1"># Feed generation is usually not desired when developing</span>
+<span class="n">FEED_ALL_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">CATEGORY_FEED_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">TRANSLATION_FEED_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">AUTHOR_FEED_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">AUTHOR_FEED_RSS</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="n">DEFAULT_PAGINATION</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="n">THEME</span> <span class="o">=</span> <span class="s2">&quot;./theme&quot;</span>
+<span class="c1"># Uncomment following line if you want document-relative URLs when developing</span>
+<span class="c1">#RELATIVE_URLS = True</span>
+
+<span class="n">MARKDOWN</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;extension_configs&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;markdown.extensions.codehilite&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;css_class&#39;</span><span class="p">:</span> <span class="s1">&#39;highlight&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;markdown.extensions.toc&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Table of Contents&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;markdown.extensions.extra&#39;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s1">&#39;markdown.extensions.meta&#39;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;output_format&#39;</span><span class="p">:</span> <span class="s1">&#39;html5&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>For more information on configuration settings, see this <a href="https://docs.getpelican.com/en/latest/settings.html">article</a>.</p>
+<h4 id="publishconfpy"><a href="https://github.com/noelmiller/noelmiller.github.io/blob/main/publishconf.py">publishconf.py</a></h4>
+<p>Since I use a Makefile, I also take advantage of using a publishconf.py which will add specific settings for publishing the site. When I am developing, I see no benefit in generating my RSS Feeds each time I generate the site during testing. In production, I do want to offer RSS Feeds, so that information is updated in this configuration file. I also want to make sure my domain information is filled out in this file to have links properly configured.</p>
+<p>Example from this blog:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># This file is only used if you use `make publish` or</span>
+<span class="c1"># explicitly specify it as your config file.</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">pelicanconf</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># If your site is available via HTTPS, make sure SITEURL begins with https://</span>
+<span class="n">SITEURL</span> <span class="o">=</span> <span class="s1">&#39;https://noelmiller.dev&#39;</span>
+<span class="n">RELATIVE_URLS</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="n">FEED_ALL_ATOM</span> <span class="o">=</span> <span class="s1">&#39;feeds/all.atom.xml&#39;</span>
+<span class="n">CATEGORY_FEED_ATOM</span> <span class="o">=</span> <span class="s1">&#39;feeds/</span><span class="si">{slug}</span><span class="s1">.atom.xml&#39;</span>
+
+<span class="n">DELETE_OUTPUT_DIRECTORY</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># Following items are often useful when publishing</span>
+
+<span class="c1">#DISQUS_SITENAME = &quot;&quot;</span>
+<span class="c1">#GOOGLE_ANALYTICS = &quot;&quot;</span>
+</code></pre></div>
+
+<h4 id="makefile"><a href="https://github.com/noelmiller/noelmiller.github.io/blob/main/Makefile">Makefile</a></h4>
+<p>I was not familiar with the concept of Makefiles before using pelican. They have been around for a long time and are useful for doing laborious build processes for your applications. The Makefile in Pelican's case is a convenient wrapper around the pelican command.</p>
+<p>I made some custom edits to my Makefile to have it generate a CNAME file on build so I don't need to worry about running a separate command to do that. It also defines variables that are easily changeable at the top of the file. Everything else in the file is generally what you get when you use the <code>pelican-quickstart</code> command.</p>
+<p>Here is my Makefile:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">PY</span><span class="o">?=</span>
+<span class="nv">PELICAN</span><span class="o">?=</span>pelican
+<span class="nv">PELICANOPTS</span><span class="o">=</span>
+
+<span class="nv">BASEDIR</span><span class="o">=</span><span class="k">$(</span>CURDIR<span class="k">)</span>
+<span class="nv">INPUTDIR</span><span class="o">=</span><span class="k">$(</span>BASEDIR<span class="k">)</span>/content
+<span class="nv">OUTPUTDIR</span><span class="o">=</span><span class="k">$(</span>BASEDIR<span class="k">)</span>/docs
+<span class="nv">CONFFILE</span><span class="o">=</span><span class="k">$(</span>BASEDIR<span class="k">)</span>/pelicanconf.py
+<span class="nv">PUBLISHCONF</span><span class="o">=</span><span class="k">$(</span>BASEDIR<span class="k">)</span>/publishconf.py
+
+<span class="nv">CNAME</span><span class="o">=</span>noelmiller.dev
+
+
+<span class="nv">DEBUG</span><span class="w"> </span><span class="o">?=</span><span class="w"> </span><span class="m">0</span>
+<span class="cp">ifeq ($(DEBUG), 1)</span>
+<span class="w">    </span><span class="nv">PELICANOPTS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span>-D
+<span class="cp">endif</span>
+
+<span class="nv">RELATIVE</span><span class="w"> </span><span class="o">?=</span><span class="w"> </span><span class="m">0</span>
+<span class="cp">ifeq ($(RELATIVE), 1)</span>
+<span class="w">    </span><span class="nv">PELICANOPTS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span>--relative-urls
+<span class="cp">endif</span>
+
+<span class="nv">SERVER</span><span class="w"> </span><span class="o">?=</span><span class="w"> </span><span class="s2">&quot;0.0.0.0&quot;</span>
+
+<span class="nv">PORT</span><span class="w"> </span><span class="o">?=</span><span class="w"> </span><span class="m">0</span>
+<span class="cp">ifneq ($(PORT), 0)</span>
+<span class="w">    </span><span class="nv">PELICANOPTS</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span>-p<span class="w"> </span><span class="k">$(</span>PORT<span class="k">)</span>
+<span class="cp">endif</span>
+
+
+<span class="nf">help</span><span class="o">:</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s1">&#39;Makefile for a pelican Web site                                           &#39;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s1">&#39;                                                                          &#39;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s1">&#39;Usage:                                                                    &#39;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s1">&#39;   make html                           (re)generate the web site          &#39;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s1">&#39;   make clean                          remove the generated files         &#39;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s1">&#39;   make regenerate                     regenerate files upon modification &#39;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s1">&#39;   make publish                        generate using production settings &#39;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s1">&#39;   make serve [PORT=8000]              serve site at http://localhost:8000&#39;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s1">&#39;   make serve-global [SERVER=0.0.0.0]  serve (as root) to $(SERVER):80    &#39;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s1">&#39;   make devserver [PORT=8000]          serve and regenerate together      &#39;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s1">&#39;   make devserver-global               regenerate and serve on 0.0.0.0    &#39;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s1">&#39;                                                                          &#39;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s1">&#39;Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   &#39;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s1">&#39;Set the RELATIVE variable to 1 to enable relative urls                    &#39;</span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="s1">&#39;                                                                          &#39;</span>
+
+<span class="nf">html</span><span class="o">:</span>
+<span class="w">    </span><span class="s2">&quot;</span><span class="k">$(</span>PELICAN<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>INPUTDIR<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>OUTPUTDIR<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>CONFFILE<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">$(</span>PELICANOPTS<span class="k">)</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="k">$(</span>CNAME<span class="k">)</span><span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>OUTPUTDIR<span class="k">)</span><span class="s2">/CNAME&quot;</span>
+
+<span class="nf">clean</span><span class="o">:</span>
+<span class="w">    </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>OUTPUTDIR<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>OUTPUTDIR<span class="k">)</span><span class="s2">&quot;</span>
+
+<span class="nf">regenerate</span><span class="o">:</span>
+<span class="w">    </span><span class="s2">&quot;</span><span class="k">$(</span>PELICAN<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>INPUTDIR<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>OUTPUTDIR<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>CONFFILE<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">$(</span>PELICANOPTS<span class="k">)</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="k">$(</span>CNAME<span class="k">)</span><span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>OUTPUTDIR<span class="k">)</span><span class="s2">/CNAME&quot;</span>
+
+<span class="nf">serve</span><span class="o">:</span>
+<span class="w">    </span><span class="s2">&quot;</span><span class="k">$(</span>PELICAN<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>-l<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>INPUTDIR<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>OUTPUTDIR<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>CONFFILE<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">$(</span>PELICANOPTS<span class="k">)</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="k">$(</span>CNAME<span class="k">)</span><span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>OUTPUTDIR<span class="k">)</span><span class="s2">/CNAME&quot;</span>
+
+<span class="nf">serve-global</span><span class="o">:</span>
+<span class="w">    </span><span class="s2">&quot;</span><span class="k">$(</span>PELICAN<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>-l<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>INPUTDIR<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>OUTPUTDIR<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>CONFFILE<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">$(</span>PELICANOPTS<span class="k">)</span><span class="w"> </span>-b<span class="w"> </span><span class="k">$(</span>SERVER<span class="k">)</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="k">$(</span>CNAME<span class="k">)</span><span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>OUTPUTDIR<span class="k">)</span><span class="s2">/CNAME&quot;</span>
+
+<span class="nf">devserver</span><span class="o">:</span>
+<span class="w">    </span><span class="s2">&quot;</span><span class="k">$(</span>PELICAN<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>-lr<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>INPUTDIR<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>OUTPUTDIR<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>CONFFILE<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">$(</span>PELICANOPTS<span class="k">)</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="k">$(</span>CNAME<span class="k">)</span><span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>OUTPUTDIR<span class="k">)</span><span class="s2">/CNAME&quot;</span>
+
+<span class="nf">devserver-global</span><span class="o">:</span>
+<span class="w">    </span><span class="k">$(</span>PELICAN<span class="k">)</span><span class="w"> </span>-lr<span class="w"> </span><span class="k">$(</span>INPUTDIR<span class="k">)</span><span class="w"> </span>-o<span class="w"> </span><span class="k">$(</span>OUTPUTDIR<span class="k">)</span><span class="w"> </span>-s<span class="w"> </span><span class="k">$(</span>CONFFILE<span class="k">)</span><span class="w"> </span><span class="k">$(</span>PELICANOPTS<span class="k">)</span><span class="w"> </span>-b<span class="w"> </span><span class="m">0</span>.0.0.0
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="k">$(</span>CNAME<span class="k">)</span><span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>OUTPUTDIR<span class="k">)</span><span class="s2">/CNAME&quot;</span>
+
+<span class="nf">publish</span><span class="o">:</span>
+<span class="w">    </span><span class="s2">&quot;</span><span class="k">$(</span>PELICAN<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>INPUTDIR<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>OUTPUTDIR<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>PUBLISHCONF<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">$(</span>PELICANOPTS<span class="k">)</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="k">$(</span>CNAME<span class="k">)</span><span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>OUTPUTDIR<span class="k">)</span><span class="s2">/CNAME&quot;</span>
+
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">html</span> <span class="n">help</span> <span class="n">clean</span> <span class="n">regenerate</span> <span class="n">serve</span> <span class="n">serve</span>-<span class="n">global</span> <span class="n">devserver</span> <span class="n">publish</span> <span class="n">github</span>
+</code></pre></div>
+
+<p>For more information on how to use the make command to serve or publish your site, see this <a href="https://docs.getpelican.com/en/latest/publish.html#make">article</a>. </p>
+<h4 id="theme"><a href="https://github.com/noelmiller/noelmiller.github.io/tree/main/theme">theme</a></h4>
+<p>The theme folder is how you define what each page looks like in your blog. The <code>static</code> directory is where you will put css, javascript, and images to be used by your theme. The <code>templates</code> directory is used for storing HMTL code for your site. These HTML pages use <a href="https://jinja.palletsprojects.com/en/3.1.x/">jinja2</a> templating inside them to generate pages and posts from your <code>content</code> directory as well as using special variables that Pelican defines. </p>
+<p>The focus of a theme is to separate your content away from how things look visually. There are pre-built themes, but I decided to create my own using the <a href="https://github.com/getpelican/pelican/tree/master/pelican/themes/simple/templates">simple theme</a> provided by Pelican and <a href="https://picocss.com/">Pico.css</a> for styling. For more information on creating your own theme, go <a href="https://docs.getpelican.com/en/latest/themes.html#creating-themes">here</a>.</p>
+<p>The one criticism I would give towards pelican is that there are not a lot of pre-built themes for it like there is for WordPress, Hugo, or other blogging platforms. </p>
+<p>Here is what my theme directory looks like:</p>
+<div class="highlight"><pre><span></span><code>└──<span class="w"> </span>theme
+<span class="w">    </span>├──<span class="w"> </span>static
+<span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>css
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>custom.css
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>pico.min.css
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>pico.min.css.map
+<span class="w">    </span>│<span class="w">       </span>├──<span class="w"> </span>postcss.config.js
+<span class="w">    </span>│<span class="w">       </span>└──<span class="w"> </span>pygments.css
+<span class="w">    </span>└──<span class="w"> </span>templates
+<span class="w">        </span>├──<span class="w"> </span>archives.html
+<span class="w">        </span>├──<span class="w"> </span>article.html
+<span class="w">        </span>├──<span class="w"> </span>author.html
+<span class="w">        </span>├──<span class="w"> </span>authors.html
+<span class="w">        </span>├──<span class="w"> </span>base.html
+<span class="w">        </span>├──<span class="w"> </span>categories.html
+<span class="w">        </span>├──<span class="w"> </span>category.html
+<span class="w">        </span>├──<span class="w"> </span>gosquared.html
+<span class="w">        </span>├──<span class="w"> </span>index.html
+<span class="w">        </span>├──<span class="w"> </span>page.html
+<span class="w">        </span>├──<span class="w"> </span>pagination.html
+<span class="w">        </span>├──<span class="w"> </span>period_archives.html
+<span class="w">        </span>├──<span class="w"> </span>tag.html
+<span class="w">        </span>├──<span class="w"> </span>tags.html
+<span class="w">        </span>└──<span class="w"> </span>translations.html
+</code></pre></div>
+
+<h4 id="requirementstxt-recommended"><a href="https://github.com/noelmiller/noelmiller.github.io/blob/main/requirements.txt">requirements.txt</a> (recommended)</h4>
+<p>When working on my blog, I prefer to use a Python Virtual Environment to do all of my dependency handling. This will ensure I will not accidentally update a python package by mistake that my blog depends on. The requirements are pretty basic for pelican and when you do an installation, it will pull all the requirements it needs to run properly. For more information on virtual environments, see this <a href="https://docs.python.org/3/library/venv.html">article</a>.</p>
+<h4 id="create_postpy-optional"><a href="https://github.com/noelmiller/noelmiller.github.io/blob/main/create_post.py">create_post.py</a> (optional)</h4>
+<p>This is a custom script I wrote specifically for my site. It uses Jinja2 templating to create a new post from templates I've defined in the top-level templates directory. </p>
+<h5 id="dependencies">Dependencies</h5>
+<ul>
+<li><a href="https://pypi.org/project/Jinja2/">Jinja2</a> - For doing the templating</li>
+<li><a href="https://pypi.org/project/python-slugify/">python-slugify</a> - For creating the markdown files based on their Title</li>
+<li><a href="https://pypi.org/project/inquirer/">inquirer</a> - For creating interactive questions</li>
+</ul>
+<h5 id="usage">Usage</h5>
+<p>Once you have installed the dependencies, you can run it by doing <code>./create_post.py</code>. It will ask you a series of questions and then place the contents of your template in the <code>./contents/posts/</code> directory.</p>
+<p>Here is the source code:</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
+
+<span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Environment</span><span class="p">,</span> <span class="n">FileSystemLoader</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="nn">inquirer</span>
+<span class="kn">from</span> <span class="nn">slugify</span> <span class="kn">import</span> <span class="n">slugify</span>
+
+<span class="n">current_datetime</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+<span class="n">date</span> <span class="o">=</span> <span class="n">current_datetime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">questions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">inquirer</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;What is the name of the article?&quot;</span><span class="p">),</span>
+    <span class="n">inquirer</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s2">&quot;description&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;In summary, what is the article about?&quot;</span><span class="p">),</span>
+    <span class="n">inquirer</span><span class="o">.</span><span class="n">List</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;What Category is the article?&quot;</span><span class="p">,</span> <span class="n">choices</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Programming&quot;</span><span class="p">,</span> <span class="s2">&quot;IT&quot;</span><span class="p">,</span> <span class="s2">&quot;Music&quot;</span><span class="p">,</span> <span class="s2">&quot;Gaming&quot;</span><span class="p">]),</span>
+    <span class="n">inquirer</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s2">&quot;tags&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;Please enter a comma separated list of tags&quot;</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="n">answers</span> <span class="o">=</span> <span class="n">inquirer</span><span class="o">.</span><span class="n">prompt</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span>
+
+<span class="n">environment</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span><span class="n">loader</span><span class="o">=</span><span class="n">FileSystemLoader</span><span class="p">(</span><span class="s2">&quot;templates/&quot;</span><span class="p">))</span>
+<span class="n">template</span> <span class="o">=</span> <span class="n">environment</span><span class="o">.</span><span class="n">get_template</span><span class="p">(</span><span class="s2">&quot;standard_post_template.md&quot;</span><span class="p">)</span>
+
+<span class="n">content</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="n">answers</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">],</span>
+    <span class="n">date</span><span class="o">=</span><span class="n">date</span><span class="p">,</span>
+    <span class="n">category</span><span class="o">=</span><span class="n">answers</span><span class="p">[</span><span class="s1">&#39;category&#39;</span><span class="p">],</span>
+    <span class="n">tags</span><span class="o">=</span><span class="n">answers</span><span class="p">[</span><span class="s1">&#39;tags&#39;</span><span class="p">],</span>
+    <span class="n">description</span><span class="o">=</span><span class="n">answers</span><span class="p">[</span><span class="s1">&#39;description&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">filepath</span> <span class="o">=</span> <span class="s2">&quot;./content/posts/&quot;</span> <span class="o">+</span> <span class="n">slugify</span><span class="p">(</span><span class="n">answers</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot;.md&quot;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">post</span><span class="p">:</span>
+    <span class="n">post</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Created </span><span class="si">{</span><span class="n">filepath</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">)</span>
+</code></pre></div>
+
+<h4 id="templates-optional"><a href="https://github.com/noelmiller/noelmiller.github.io/tree/main/templates">templates</a> (optional)</h4>
+<p>This is the directory that the <code>create_post.py</code> script uses. These templates are written in Jinja2 format.</p>
+<h4 id="readmemd-optional"><a href="https://github.com/noelmiller/noelmiller.github.io/blob/main/README.md">README.md</a> (optional)</h4>
+<p>This is a basic README file that I wrote up for my site. Useful for knowing what the project is.</p>
+<h3 id="development-environment">Development Environment</h3>
+<p>For developing my blog, I use Fedora 38 Workstation on my desktop, a text editor (VIM), a Virtual Python Environment, and the command <code>make devserver-global</code> to start up an auto refreshing instance of my blog on port 8000. This allows me to make edits to the site, save my file, and refresh the page to see changes instantly reflected on the site. No need to stop and restart the server while developing. </p>
+<p><code>make devserver-global</code> also allows traffic to connect to my desktop computer on the local network (so long as I open a firewall rule for it). This makes it convenient to develop from my iPad if I am not at my desk. All I do is connect to my desktop over SSH and navigate to my desktop's <code>ipaddress:8000</code> to access the site remotely. </p>
+<h3 id="writing-posts">Writing Posts</h3>
+<p>For writing posts, I create a post from my post template using <code>create_post.py</code> and start writing in Markdown. The convenient thing about my <code>create_post.py</code> script is that it creates all the frontmatter data so I can focus on writing my content. </p>
+<p>Since all of my content is source controlled by git, I create a separate branch called <code>drafts</code> where all of my drafts are put until I am ready to publish them to my site. I will explain this further when I talk about how I configured Github Pages to publish my site.</p>
+<h3 id="configuring-github-pages">Configuring Github Pages</h3>
+<p>To configure Github pages, it is very simple. </p>
+<ol>
+<li>Create a repository on Github</li>
+<li>Go to the settings of the repository</li>
+<li>Under code and automation, select Pages</li>
+<li>Under build and deployment, select Deploy from a branch</li>
+<li>For your branch, you will want to select main (or whatever branch you want to use) and select the <code>/docs</code> directory (or whatever your output directory is)</li>
+<li>For custom domain, fill out a custom domain (you will want to create a CNAME record in your public DNS provider)</li>
+<li>Enforce HTTPS or don't!</li>
+</ol>
+<p>For more information on Github pages, see <a href="https://docs.github.com/en/pages">here</a>.</p>
+<h3 id="publishing-posts">Publishing Posts</h3>
+<p>To conclude, publishing posts is very simple. </p>
+<h4 id="3-step-process">3 step process</h4>
+<ol>
+<li>Run <code>make publish</code> to generate the production version of your site. </li>
+<li>Add everything to a git commit and commit it to your <code>drafts</code> branch. </li>
+<li>Merge your drafts branch into your <code>main</code> branch which will then run a git action to confirm that the site will built properly. If it builds, it will start serving it on Github Pages immediately after it builds!</li>
+</ol>
 <footer class="post-info">
   <div id="post-info">
-  <time class="published" datetime="2023-09-18T00:00:00-05:00">
-    >| Mon 18 September 2023
+  <time class="published" datetime="2023-09-21T00:00:00-05:00">
+    >| Thu 21 September 2023
   </time>
   <address style="display:inline-block" class="vcard author">
     |     <a class="url fn" href="https://noelmiller.dev/author/noel-miller.html">Noel Miller</a>
   </address>
   <div style="display: inline-block" class="category">
-    | Category: <a href="https://noelmiller.dev/category/programming.html">Programming</a>
+    | Category: <a href="https://noelmiller.dev/category/coding.html">coding</a>
   </div>
   <div style="display: inline-block" class="tags">
     | Tags:
