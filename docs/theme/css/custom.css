@@ -1,7 +1,7 @@
 /* Deep-purple Dark scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
 [data-theme="dark"] {
-  --primary: #A5D6FF;
+  --primary: #80C6FF;
   --primary-hover: #4DAFFF;
   --primary-focus: rgba(94, 53, 177, 0.25);
   --primary-inverse: #FFF;
