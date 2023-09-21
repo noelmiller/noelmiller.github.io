@@ -69,7 +69,7 @@ main.container {
 }
 
 div.grid {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -84,14 +84,14 @@ section#nav {
   background-color:#0b1014;
 }
 
-  h1.page-title {
+h1.page-title {
     margin-bottom: 0.75em;
-  }
-  h1.author-category-tags-title {
+}
+h1.author-category-tags-title {
     margin-bottom: 0.75em;
     padding-top: 2.5em;
     padding-left: 0.6em;
-  }
+}
 
 @media only screen and (max-width: 1107px) {
   #fadeshow1 {
@@ -117,9 +117,6 @@ div#main-page ol#post-list {
 header h2.entry-title {
   padding-top: 5.2em;
 }
-div.grid {
-  position: absolute;
-}
 
 article.page {
   margin-top: 9em; 
@@ -138,6 +135,7 @@ article.article {
   border-radius: 20px;
 }
 
+
 h1.author-category-tags-title {
   margin-bottom: 0.75em;
   padding-top: 4.8em;
@@ -152,4 +150,28 @@ h1.author-category-tags-title {
 }
 html {
   scroll-behavior: smooth;
+}
+
+.toc {
+    display: table;
+    width: auto;
+}
+
+/* TOC heading in bold */
+.toc .toctitle {
+    font-weight: bold;
+}
+
+/* No bullets for toc list, indentation of nested lists 1em */
+.toc ul {
+    padding-left: 1rem;
+    margin-bottom: 0.75em;
+}
+
+.toc ul li {
+    list-style-type: disclosure-closed;
+}
+
+article.article h3 {
+  margin-top: 0.75em;
 }
