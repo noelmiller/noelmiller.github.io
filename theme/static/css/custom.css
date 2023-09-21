@@ -1,11 +1,11 @@
 /* Deep-purple Dark scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
 [data-theme="dark"] {
-  --primary: #5e35b1;
-  --primary-hover: #673ab7;
+  --primary: #80C6FF;
+  --primary-hover: #4DAFFF;
   --primary-focus: rgba(94, 53, 177, 0.25);
   --primary-inverse: #FFF;
-  
+  --muted-color: #FFF; 
 }
 
 /* Deep-purple (Common styles) */
