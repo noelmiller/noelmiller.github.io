@@ -1,5 +1,6 @@
 Title: Projects
 ### Programming Projects
+
 #### [My Blog](https://github.com/noelmiller/noelmiller.github.io)
 
 - Description: The page you are looking at right now! I am currently working on finalizing all of the pages. I may make some additional tweaks here or there to my theme.
