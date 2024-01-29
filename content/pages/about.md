@@ -16,11 +16,11 @@ I have been working in IT for about 9 years now. I have gained most of my experi
 
 ##### What am I interested in?
 
-- Ansible
-- Immutable Linux Distributions
+- Atomic Linux Distributions
     - [Universal Blue](https://universal-blue.org/)
     - [Fedora Silverblue](https://fedoraproject.org/silverblue/)
     - [Fedora CoreOS](https://fedoraproject.org/coreos/)
+- Ansible
 - Containers
 - Openshift (Kubernetes)
 
@@ -40,9 +40,9 @@ I have been playing video games since I was a young kid. I primarily play games 
 
 ##### What am I playing?
 
-- Final Fantasy XIV (Playing through Shadowbringers currently)
-- PlateUp
-- Baldur's Gate 3
+- Final Fantasy XIV (Playing through Endwalker currently)
+- Halo Infinite
+- The Finals
 
 ##### Favorite Games
 
