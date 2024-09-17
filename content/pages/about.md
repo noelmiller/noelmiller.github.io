@@ -12,15 +12,15 @@ I currently work for [Red Hat](https://www.redhat.com/en) as a Cleared Maintenan
 
 #### Information Technology
 
-I have been working in IT for about 9 years now. I have gained most of my experience through working at various Managed Service Providers. I have been a Linux User since 2012 and my favorite distribution is Fedora. Though my preference is Fedora, I have used Ubuntu, Debian, OpenSuse, Arch Linux, Solus, and many other distros as a daily driver. 
+I have been working in IT for about 9 years now. I have gained most of my experience through working at various Managed Service Providers. I have been a Linux User since 2012 and my favorite distribution is Fedora. Though my preference is Fedora, I have used Ubuntu, Debian, OpenSuse, Arch Linux, Solus, and many other distros as a daily driver.
 
 ##### What am I interested in?
 
-- Ansible
-- Immutable Linux Distributions
+- Atomic Linux Distributions
     - [Universal Blue](https://universal-blue.org/)
     - [Fedora Silverblue](https://fedoraproject.org/silverblue/)
     - [Fedora CoreOS](https://fedoraproject.org/coreos/)
+- Ansible
 - Containers
 - Openshift (Kubernetes)
 
@@ -36,13 +36,14 @@ I do have a home lab! It is probably not as fancy as some others have, but it wo
 
 #### Video Games
 
-I have been playing video games since I was a young kid. I primarily play games on PC these days. 
+I have been playing video games since I was a young kid. I primarily play games on PC these days.
 
 ##### What am I playing?
 
-- Final Fantasy XIV (Playing through Shadowbringers currently)
-- PlateUp
-- Baldur's Gate 3
+- Final Fantasy XIV (Playing through Endwalker currently)
+- Final Fantasy XVI
+- Deadlock
+- Warhammer 40,000: Space Marine 2
 
 ##### Favorite Games
 
