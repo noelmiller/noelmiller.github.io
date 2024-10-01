@@ -1,9 +1,8 @@
 Title: Projects
-### Programming Projects
 
 #### [Universal Blue](https://universal-blue.org)
 
-- Description: I am a member of the project! I assist with project management related tasks, as well as assisting with contributions!
+- Description: I am a core contributor of the project! I assist with project management related tasks, as well as assisting with contributions and giving talks!
 
 #### [Isengard](https://github.com/noelmiller/isengard)
 
@@ -15,4 +14,4 @@ Title: Projects
 
 #### [My Blog](https://github.com/noelmiller/noelmiller.github.io)
 
-- Description: The page you are looking at right now! I am currently working on finalizing all of the pages. I may make some additional tweaks here or there to my theme.
+- Description: The page you are looking at right now!
