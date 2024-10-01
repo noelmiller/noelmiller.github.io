@@ -2,7 +2,7 @@ Title: About
 
 ### TLDR
 
-Hello, my name is Noel Miller! This is my personal blog where I will be writing about my various projects and other things I am interested in. My primary interests are IT, coding, and music. The topics may expand outside of these areas depending on what I am interested in at any given time.
+Hello, my name is Noel Miller! This is my personal blog where I will be writing about my various projects and other things I am interested in. My primary interests are IT, coding, and gaming. The topics may expand outside of these areas depending on what I am interested in at any given time.
 
 ### What is my day job?
 
@@ -12,7 +12,7 @@ I currently work for [Red Hat](https://www.redhat.com/en) as a Cleared Maintenan
 
 #### Information Technology
 
-I have been working in IT for about 9 years now. I have gained most of my experience through working at various Managed Service Providers. I have been a Linux User since 2012 and my favorite distribution is Fedora. Though my preference is Fedora, I have used Ubuntu, Debian, OpenSuse, Arch Linux, Solus, and many other distros as a daily driver.
+I have been working in IT for about 10 years now. I have gained most of my experience through working at various Managed Service Providers. I have been a Linux User since 2012 and my favorite distribution is Fedora. Though my preference is Fedora, I have used Ubuntu, Debian, OpenSuse, Arch Linux, Solus, and many other distros as a daily driver.
 
 ##### What am I interested in?
 
@@ -20,17 +20,14 @@ I have been working in IT for about 9 years now. I have gained most of my experi
     - [Universal Blue](https://universal-blue.org/)
     - [Fedora Silverblue](https://fedoraproject.org/silverblue/)
     - [Fedora CoreOS](https://fedoraproject.org/coreos/)
+    - [Image Mode for RHEL](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/image-mode)
 - Ansible
 - Containers
 - Openshift (Kubernetes)
 
 #### Programming
 
-I am by no means a professional programmer, but I do have an interest in trying to solve problems by hacking scripts together. The languages I primarily use are Bash and Python. I would like to improve my skills with python since Ansible is programmed using Python. I have written a fair amount of Ansible Playbooks as well to automate all sorts of things.
-
-#### Home Lab
-
-I do have a home lab! It is probably not as fancy as some others have, but it works well enough for my purposes! I will likely do a blog post on this soon about the current state of my home lab. I will likely do an update each year of how it progresses, but no promises!
+I am by no means a professional programmer, but I do have an interest in trying to solve problems by hacking scripts together. The languages I primarily use are Bash and Python.
 
 ### Personal Interests
 
@@ -45,7 +42,7 @@ I have been playing video games since I was a young kid. I primarily play games 
 - Deadlock
 - Warhammer 40,000: Space Marine 2
 
-##### Favorite Games
+##### Favorite Games of All Time
 
 - Halo 2
 - Super Smash Brothers Melee
@@ -55,7 +52,7 @@ I have been playing video games since I was a young kid. I primarily play games 
 
 #### Music
 
-I enjoy both playing and listening to metal music. (I enjoy more genres than just metal, but it is my favorite). I still have not released any music as a solo artist, but I am hoping to release some music soon<sup>TM</sup>.
+I enjoy both playing and listening to metal music. (I enjoy more genres than just metal, but it is my favorite).
 
 ##### Favorite Bands
 
