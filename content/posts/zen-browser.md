@@ -1,5 +1,5 @@
 Title: Zen Browser
-Date: 2024-09-17
+Date: 2024-10-01
 Category: IT
 Tags: tech,browser,productivity
 Description: Zen Browser is a remarkable replacement for Firefox, built on Firefox!
@@ -42,13 +42,13 @@ Container tabs are a feature that allows you to isolate tabs from each other. Th
 
 To enable container tabs, go to the settings menu, search `container tabs`, and enable the feature. You can also define your container tabs in this menu.
 
-\<INSERT GIF HERE\>
+<a href="{static}/images/zen-browser/enable-container-tabs.mp4"><video loop autoplay muted controls><source src="{static}/images/zen-browser/enable-container-tabs.mp4" type="video/mp4"></video></a>
 
 #### Create Container Tabs
 
 By default, there will be several container tabs defined already. These may be good enough for your use case, but I created my own container tabs. It is simple to create a new container tab.
 
-\<INSERT GIF HERE\>
+<a href="{static}/images/zen-browser/create-container.mp4"><video loop autoplay muted controls><source src="{static}/images/zen-browser/create-container.mp4" type="video/mp4"></video></a>
 
 ### Workspaces
 
@@ -72,7 +72,7 @@ You can switch between workspaces by clicking on the workspace icon of the works
 
 The Zen Sidebar is a feature I have not made extensive use of yet, but it is a feature that I can see being very useful. It is a sidebar that allows you to open a small window for a specific website. I could see this potentially being useful for a chat application, a to-do list, or a music player. I have not personally used it this way, but I could see it being useful for some people.
 
-\<INSERT IMAGE HERE\>
+<a href="{static}/images/zen-browser/zen-sidebar.png">![Zen Screenshot]({static}/images/zen-browser/zen-sidebar.png)</a>
 
 ### Splitview
 
@@ -80,11 +80,11 @@ Splitview is a feature that allows you to split an existing browser window into 
 
 #### Horizontal Splitview
 
-\<INSERT GIF HERE\>
+<a href="{static}/images/zen-browser/zen-horizontal-split.png">![Zen Screenshot]({static}/images/zen-browser/zen-horizontal-split.png)</a>
 
 #### Vertical Splitview
 
-\<INSERT GIF HERE\>
+<a href="{static}/images/zen-browser/zen-vertical-split.png">![Zen Screenshot]({static}/images/zen-browser/zen-vertical-split.png)</a>
 
 ### Final Thoughts
 
