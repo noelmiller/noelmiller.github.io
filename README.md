@@ -7,7 +7,7 @@ I host the site right [here](https://noelmiller.dev) on GitHub pages.
 
 # Run Locally
 
-To run the site locally, you will want to have podman or docker installed.
+To run the site locally, you will want to have podman installed.
 
 Build the container to run the site:
 
