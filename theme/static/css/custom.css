@@ -16,6 +16,7 @@ nav.navbar ul li {
 
 div#main-page ol#post-list {
     padding-top: 5em;
+    padding-left: 0em;
 }
 
 a.outline {
