@@ -23,7 +23,6 @@ help:
 	@echo '   make build                          builds a dev container             '
 	@echo '   make clean                          remove the generated files         '
 	@echo '   make post                           create post using container        '
-	@echo '   make publish                        publish changes to docs directory  '
 	@echo '   make run                            runs a dev container               '
 	@echo '                                                                          '
 	@echo 'Usage (Inside the Container):                                             '
