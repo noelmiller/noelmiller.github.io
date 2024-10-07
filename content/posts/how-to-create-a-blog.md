@@ -6,6 +6,8 @@ Description: Creating a Blog and Custom Theme Using Pelican
 
 ---
 
+> **Important Note**: This article is a year old and I have not had a chance to update it. The article is still mostly correct, although I have changed how I deploy the site. I now use a GitHub Action to build the site provided by the pelican dev. I will update this article when I have some time.
+
 ### TLDR
 [Pelican](https://getpelican.com/) is a static site generator (built on python) that I have seen primarily used to create blogs. It is the project I used to build this site. Source code for this site is available [here](https://github.com/noelmiller/noelmiller.github.io).
 
@@ -14,9 +16,9 @@ Description: Creating a Blog and Custom Theme Using Pelican
 ---
 
 ### What is [Pelican](https://getpelican.com/)?
-*Pelican is a static site generator that requires no database or server-side logic.* I definitely think that it lives up to it's description from the creators! It is fairly easy to use and their [documentation](https://docs.getpelican.com/en/latest/) is solid! 
+*Pelican is a static site generator that requires no database or server-side logic.* I definitely think that it lives up to it's description from the creators! It is fairly easy to use and their [documentation](https://docs.getpelican.com/en/latest/) is solid!
 
-Pelican will ingest either reStructuredText or Markdown and create HTML output in a directory you specify! This is great for having an easy way to write blog posts without having to do all of the HTML markup by hand. It will output this HTML with styling through a theme you have constructed (or you can use an existing theme someone else has created). This helps with keeping your blog designed consistently in every post or page. 
+Pelican will ingest either reStructuredText or Markdown and create HTML output in a directory you specify! This is great for having an easy way to write blog posts without having to do all of the HTML markup by hand. It will output this HTML with styling through a theme you have constructed (or you can use an existing theme someone else has created). This helps with keeping your blog designed consistently in every post or page.
 
 There are other competing static site generators (see [here](https://jamstack.org/generators/) for a nice list of them), but Pelican seemed the most straight forward to me! It is also built on python which is the programming language I am the most familiar working with!
 
@@ -158,13 +160,13 @@ The docs directory is what I use as the output directory for my processed HTML. 
 ```
 
 #### [pelicanconf.py](https://github.com/noelmiller/noelmiller.github.io/blob/main/pelicanconf.py)
-This file controls how pelican generates your static site. There are several useful items in here. I have kept mine pretty simple, but the main things here are PATH, DEFAULT_PAGINATION, THEME, and MARKDOWN. 
+This file controls how pelican generates your static site. There are several useful items in here. I have kept mine pretty simple, but the main things here are PATH, DEFAULT_PAGINATION, THEME, and MARKDOWN.
 
-PATH controls where it looks for content to generate the site with. 
+PATH controls where it looks for content to generate the site with.
 
-DEFAULT_PAGINATION controls how many articles will show up on a page before it will paginate. 
+DEFAULT_PAGINATION controls how many articles will show up on a page before it will paginate.
 
-THEME is the path to your theme that you are using. 
+THEME is the path to your theme that you are using.
 
 MARKDOWN is a useful section to fill out if you want extended markdown support. In my blog, I wanted both Code Highlighting and a Table of Contents feature that can be generated inside of my articles.
 
@@ -321,15 +323,15 @@ publish:
 
 .PHONY: html help clean regenerate serve serve-global devserver publish github
 ```
-For more information on how to use the make command to serve or publish your site, see this [article](https://docs.getpelican.com/en/latest/publish.html#make). 
+For more information on how to use the make command to serve or publish your site, see this [article](https://docs.getpelican.com/en/latest/publish.html#make).
 
 
 #### [theme](https://github.com/noelmiller/noelmiller.github.io/tree/main/theme)
-The theme folder is how you define what each page looks like in your blog. The `static` directory is where you will put css, javascript, and images to be used by your theme. The `templates` directory is used for storing HMTL code for your site. These HTML pages use [jinja2](https://jinja.palletsprojects.com/en/3.1.x/) templating inside them to generate pages and posts from your `content` directory as well as using special variables that Pelican defines. 
+The theme folder is how you define what each page looks like in your blog. The `static` directory is where you will put css, javascript, and images to be used by your theme. The `templates` directory is used for storing HMTL code for your site. These HTML pages use [jinja2](https://jinja.palletsprojects.com/en/3.1.x/) templating inside them to generate pages and posts from your `content` directory as well as using special variables that Pelican defines.
 
 The focus of a theme is to separate your content away from how things look visually. There are pre-built themes, but I decided to create my own using the [simple theme](https://github.com/getpelican/pelican/tree/master/pelican/themes/simple/templates) provided by Pelican and [Pico.css](https://picocss.com/) for styling. For more information on creating your own theme, go [here](https://docs.getpelican.com/en/latest/themes.html#creating-themes).
 
-The one criticism I would give towards pelican is that there are not a lot of pre-built themes for it like there is for WordPress, Hugo, or other blogging platforms. 
+The one criticism I would give towards pelican is that there are not a lot of pre-built themes for it like there is for WordPress, Hugo, or other blogging platforms.
 
 Here is what my theme directory looks like:
 ```shell
@@ -363,7 +365,7 @@ Here is what my theme directory looks like:
 When working on my blog, I prefer to use a Python Virtual Environment to do all of my dependency handling. This will ensure I will not accidentally update a python package by mistake that my blog depends on. The requirements are pretty basic for pelican and when you do an installation, it will pull all the requirements it needs to run properly. For more information on virtual environments, see this [article](https://docs.python.org/3/library/venv.html).
 
 #### [create_post.py](https://github.com/noelmiller/noelmiller.github.io/blob/main/create_post.py) (optional)
-This is a custom script I wrote specifically for my site. It uses Jinja2 templating to create a new post from templates I've defined in the top-level templates directory. 
+This is a custom script I wrote specifically for my site. It uses Jinja2 templating to create a new post from templates I've defined in the top-level templates directory.
 
 ##### Dependencies
 - [Jinja2](https://pypi.org/project/Jinja2/) - For doing the templating
@@ -418,17 +420,17 @@ This is the directory that the `create_post.py` script uses. These templates are
 This is a basic README file that I wrote up for my site. Useful for knowing what the project is.
 
 ### Development Environment
-For developing my blog, I use Fedora 38 Workstation on my desktop, a text editor (VIM), a Virtual Python Environment, and the command `make devserver-global` to start up an auto refreshing instance of my blog on port 8000. This allows me to make edits to the site, save my file, and refresh the page to see changes instantly reflected on the site. No need to stop and restart the server while developing. 
+For developing my blog, I use Fedora 38 Workstation on my desktop, a text editor (VIM), a Virtual Python Environment, and the command `make devserver-global` to start up an auto refreshing instance of my blog on port 8000. This allows me to make edits to the site, save my file, and refresh the page to see changes instantly reflected on the site. No need to stop and restart the server while developing.
 
-`make devserver-global` also allows traffic to connect to my desktop computer on the local network (so long as I open a firewall rule for it). This makes it convenient to develop from my iPad if I am not at my desk. All I do is connect to my desktop over SSH and navigate to my desktop's `ipaddress:8000` to access the site remotely. 
+`make devserver-global` also allows traffic to connect to my desktop computer on the local network (so long as I open a firewall rule for it). This makes it convenient to develop from my iPad if I am not at my desk. All I do is connect to my desktop over SSH and navigate to my desktop's `ipaddress:8000` to access the site remotely.
 
 ### Writing Posts
-For writing posts, I create a post from my post template using `create_post.py` and start writing in Markdown. The convenient thing about my `create_post.py` script is that it creates all the frontmatter data so I can focus on writing my content. 
+For writing posts, I create a post from my post template using `create_post.py` and start writing in Markdown. The convenient thing about my `create_post.py` script is that it creates all the frontmatter data so I can focus on writing my content.
 
 Since all of my content is source controlled by git, I create a separate branch called `drafts` where all of my drafts are put until I am ready to publish them to my site. I will explain this further when I talk about how I configured Github Pages to publish my site.
 
 ### Configuring Github Pages
-To configure Github pages, it is very simple. 
+To configure Github pages, it is very simple.
 
 1. Create a repository on Github
 2. Go to the settings of the repository
@@ -442,9 +444,9 @@ For more information on Github pages, see [here](https://docs.github.com/en/page
 
 
 ### Publishing Posts
-To conclude, publishing posts is very simple. 
+To conclude, publishing posts is very simple.
 
 #### 3 step process
-1. Run `make publish` to generate the production version of your site. 
-2. Add everything to a git commit and commit it to your `drafts` branch. 
+1. Run `make publish` to generate the production version of your site.
+2. Add everything to a git commit and commit it to your `drafts` branch.
 3. Merge your drafts branch into your `main` branch which will then run a git action to confirm that the site will built properly. If it builds, it will start serving it on Github Pages immediately after it builds!
