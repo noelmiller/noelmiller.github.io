@@ -1,34 +1,17 @@
-/* Deep-purple Dark scheme (Forced) */
-/* Enabled if forced with data-theme="dark" */
-[data-theme="dark"] {
-    --primary: #80c6ff;
-    --primary-hover: #4dafff;
-    --primary-focus: rgba(94, 53, 177, 0.25);
-    --primary-inverse: #fff;
-    --muted-color: #fff;
+h2.entry-title a {
+    text-decoration: none;
 }
 
-/* Deep-purple (Common styles) */
-:root {
-    --form-element-active-border-color: var(--primary);
-    --form-element-focus-color: var(--primary-focus);
-    --switch-color: var(--primary-inverse);
-    --switch-checked-background-color: var(--primary);
+a:hover {
+    text-decoration: none;
 }
 
-h2.entry-title {
-    padding: auto;
+a.url {
+    text-decoration: none;
 }
 
-header h2.entry-title {
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-bottom: 0.75em;
+nav.navbar ul li {
+    color: #ffffff;
 }
 
 div#main-page ol#post-list {
@@ -44,7 +27,6 @@ a.social {
 }
 
 article.hentry {
-    margin-top: 0;
     margin-bottom: 1.5em;
     padding: 25px;
     border-radius: 20px;
@@ -52,14 +34,14 @@ article.hentry {
 
 article.page {
     margin-top: 5em;
-    padding-top: 1em;
     border-radius: 20px;
+    padding: 2em;
 }
 
 article.article {
     margin-top: 5em;
-    padding-top: 1em;
     border-radius: 20px;
+    padding: 2em;
 }
 
 article.article footer div#post-info {
@@ -178,8 +160,26 @@ article.article h3 {
     margin-top: 0.75em;
 }
 
+article.article a {
+    text-decoration: none;
+}
+
+article.page a {
+    text-decoration: none;
+}
+
 video {
     max-width: 100%;
     height: auto;
     border-style: none;
+    border-radius: 5px;
+}
+
+img {
+    border-style: none;
+    border-radius: 5px;
+}
+
+code {
+    color: var(--pico-color);
 }
