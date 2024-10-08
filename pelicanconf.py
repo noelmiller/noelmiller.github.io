@@ -30,3 +30,7 @@ MARKDOWN = {
     },
     'output_format': 'html5',
 }
+
+LIQUID_TAGS = ["youtube"]
+
+YOUTUBE_THUMB_ONLY = True
