@@ -1,0 +1,11 @@
+name: Build Pelican Site
+on:
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+jobs:
+  build:
+    uses: "noelmiller/pelican/.github/workflows/build.yml@decouple_build_workflow"
+    with:
+      settings: "publishconf.py"
+      requirements: "-r requirements.txt"
