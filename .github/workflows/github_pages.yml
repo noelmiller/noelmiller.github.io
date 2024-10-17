@@ -16,6 +16,8 @@ jobs:
     uses: "seanh/pelican/.github/workflows/github_pages.yml@pelican_decouple_build_workflow-single-file"
     permissions:
       id-token: write
+      contents: read
+      pages: write
     with:
       settings: "publishconf.py"
       requirements: "-r requirements.txt"
