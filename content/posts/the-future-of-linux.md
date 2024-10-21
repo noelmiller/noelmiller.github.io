@@ -1,14 +1,14 @@
-Title: Image Based Systems are the Future of Linux
+Title: The Future of Linux
 Date: 2024-10-20
 Category: IT
 Tags: linux,bazzite,bluefin,fedora
-Description: I will be explaining why I personally believe that image based systems are the future of Linux.
+Description: Image based systems are the future of Linux.
 
 ---
 
 ### TLDR
 
-I personally believe that image based systems are the future of Linux on desktop, server, and IOT devices. I have been using a custom image of [Bazzite](https://bazzite.gg) as my day-to-day desktop image for slightly over a year. My usage of Bazzite has strongly influenced my opinion of what the future could look like.
+Image based systems are the future of Linux on desktop, server, and IOT devices. They provide many advantages over a traditional package based system, but they also have their own challenges. I explain why you should still use them, and why I am confident that they will become the standard in the future.
 
 [TOC]
 
