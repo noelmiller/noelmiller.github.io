@@ -1,5 +1,17 @@
 Title: Resume
 
+<!---
+# Noel Miller
+
+**IT Consultant**
+
+Email: [INSERT EMAIL HERE]
+
+Phone: [INSERT PHONE NUMBER HERE]
+
+[LinkedIn](https://www.linkedin.com/in/noel-miller-533909113/) | [GitHub](https://github.com/noelmiller) | [Blog](https://noelmiller.dev)
+-->
+
 ### Introduction
 
 I am a self-taught IT Consultant with a strong background in systems and consulting clients. With a decade of professional experience (8 years being in managed services), I have a strong understanding of the IT needs in a wide variety of business sectors. My passion is to automate and simplify IT processes / systems to allow businesses to focus on their business problems and not on technology problems.
@@ -165,42 +177,52 @@ Non-Technical Roles:
 
 #### Cloud
 
-- AWS : Experienced
-- Azure : Experienced
-- Google Cloud Platform : Familiar
+| Name   | Proficiency |
+| ------ | ----------- |
+| AWS    | Experienced |
+| Azure  | Experienced |
+| Google | Familiar    |
 
 #### Programming, Scripting, and Platforms
 
-- Ansible : Experienced
-- PowerShell : Experienced
-- Bash : Experienced
-- Python : Intermediate
-- Git : Experienced
-- Docker : Experienced
-- Podman : Experienced
-- Terraform : Familiar
-- Kubernetes : Intermediate
-- OpenShift : Familiar
+| Name       | Proficiency  |
+| ---------- | ------------ |
+| Ansible    | Experienced  |
+| Bash       | Experienced  |
+| Docker     | Experienced  |
+| Git        | Experienced  |
+| Kubernetes | Intermediate |
+| OpenShift  | Familiar     |
+| Podman     | Experienced  |
+| PowerShell | Experienced  |
+| Python     | Intermediate |
+| Terraform  | Familiar     |
 
 #### Networking
 
-- Cisco : Familiar
-- pfSense : Experienced
-- Dell SonicWall : Intermediate
-- Ubiquiti : Experienced
-- FortiGate : Intermediate
+| Name       | Proficiency  |
+| ---------- | ------------ |
+| Cisco      | Familiar     |
+| FortiGate  | Intermediate |
+| pfSense    | Experienced  |
+| SonicWall  | Intermediate |
+| Ubiquiti   | Experienced  |
 
 #### Operating Systems
 
-- RHEL 7 - 9 : Experienced
-- Ubuntu 12.04 - 24.04 : Experienced
-- Windows Server 2008 - 2022 : Experienced
+| Name                       | Proficiency |
+| -------------------------- | ----------- |
+| RHEL 7 - 9                 | Experienced |
+| Ubuntu 12.04 - 24.04       | Experienced |
+| Windows Server 2008 - 2022 | Experienced |
 
 #### Virtualization
 
-- VMware 5 - 8 : Experienced
-- Hyper-V : Experienced
-- Proxmox : Experienced
-- KVM : Experienced
-- QEMU : Experienced
-- OpenShift Virtualization : Familiar
+| Name                     | Proficiency |
+| ------------------------ | ----------- |
+| Hyper-V                  | Experienced |
+| KVM                      | Experienced |
+| OpenShift Virtualization | Familiar    |
+| Proxmox                  | Experienced |
+| QEMU                     | Experienced |
+| VMware ESXi 5 - 8        | Experienced |
