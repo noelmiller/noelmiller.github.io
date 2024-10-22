@@ -177,31 +177,31 @@ Non-Technical Roles:
 
 #### Cloud
 
-| Name   | Proficiency |
-| ------ | ----------- |
-| AWS    | Experienced |
-| Azure  | Experienced |
-| Google | Familiar    |
+| Name    | Proficiency  |
+| :------ | :----------- |
+| AWS     | Experienced  |
+| Azure   | Experienced  |
+| Google  | Familiar     |
 
 #### Programming, Scripting, and Platforms
 
-| Name       | Proficiency  |
-| ---------- | ------------ |
-| Ansible    | Experienced  |
-| Bash       | Experienced  |
-| Docker     | Experienced  |
-| Git        | Experienced  |
-| Kubernetes | Intermediate |
-| OpenShift  | Familiar     |
-| Podman     | Experienced  |
-| PowerShell | Experienced  |
-| Python     | Intermediate |
-| Terraform  | Familiar     |
+| Name        | Proficiency  |
+| :---------- | :----------- |
+| Ansible     | Experienced  |
+| Bash        | Experienced  |
+| Docker      | Experienced  |
+| Git         | Experienced  |
+| Kubernetes  | Intermediate |
+| OpenShift   | Familiar     |
+| Podman      | Experienced  |
+| PowerShell  | Experienced  |
+| Python      | Intermediate |
+| Terraform   | Familiar     |
 
 #### Networking
 
 | Name       | Proficiency  |
-| ---------- | ------------ |
+| :--------- | :----------- |
 | Cisco      | Familiar     |
 | FortiGate  | Intermediate |
 | pfSense    | Experienced  |
@@ -211,7 +211,7 @@ Non-Technical Roles:
 #### Operating Systems
 
 | Name                       | Proficiency |
-| -------------------------- | ----------- |
+| :------------------------- | :---------- |
 | RHEL 7 - 9                 | Experienced |
 | Ubuntu 12.04 - 24.04       | Experienced |
 | Windows Server 2008 - 2022 | Experienced |
@@ -219,7 +219,7 @@ Non-Technical Roles:
 #### Virtualization
 
 | Name                     | Proficiency |
-| ------------------------ | ----------- |
+| :----------------------- | :---------- |
 | Hyper-V                  | Experienced |
 | KVM                      | Experienced |
 | OpenShift Virtualization | Familiar    |
