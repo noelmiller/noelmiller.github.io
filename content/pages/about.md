@@ -37,18 +37,18 @@ I have been playing video games since I was a young kid. I primarily play games 
 
 ##### What am I playing?
 
-- Final Fantasy XIV (playing through Endwalker currently)
+- Final Fantasy XIV (playing through Dawntrail currently)
 - Final Fantasy XVI
 - Deadlock
-- Warhammer 40,000: Space Marine 2
+- Bloodborne
 
 ##### Favorite Games of All Time
 
-- Halo 2
-- Super Smash Brothers Melee
-- Dark Souls 3
-- Elden Ring
-- The Elder Scrolls V: Skyrim
+1. Halo 2
+2. Super Smash Brothers Melee
+3. Bloodborne
+4. Dark Souls 3
+5. Elden Ring
 
 #### Music
 
