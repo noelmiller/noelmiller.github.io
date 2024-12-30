@@ -50,7 +50,7 @@ create-post:
 	python create_post.py
 
 devserver:
-	"$(PELICAN)" -lr "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
+	"$(PELICAN)" -lr "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" -b 0.0.0.0 $(PELICANOPTS)
 	echo $(CNAME) > "$(OUTPUTDIR)/CNAME"
 
 .PHONY: build clean post publish run create-post devserver publish-docs
