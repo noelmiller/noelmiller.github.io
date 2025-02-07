@@ -35,16 +35,25 @@ help:
 	@echo '                                                                          '
 
 build:
-	podman build -t pelican:latest .
+	podman build -t noelmiller.dev:latest .
+
+build-docker:
+	docker build -f Containerfile -t noelmiller.dev:latest .
 
 clean:
 	[ ! -d "$(OUTPUTDIR)" ] || rm -rf "$(OUTPUTDIR)"
 
 post:
-	podman run --rm -it --volume .:/app:Z -p 8000:8000 pelican:latest create-post
+	podman run --rm -it --volume .:/app:Z -p 8000:8000 noelmiller.dev:latest create-post
+
+post-docker:
+	docker run --rm -it --volume .:/app -p 8000:8000 noelmiller.dev:latest create-post
 
 run:
-	podman run --rm -it --volume .:/app:Z -p 8000:8000 pelican:latest devserver
+	podman run --rm -it --volume .:/app:Z -p 8000:8000 noelmiller.dev:latest devserver
+
+run-docker:
+	docker run --rm -it --volume .:/app -p 8000:8000 noelmiller.dev:latest devserver
 
 create-post:
 	python create_post.py
