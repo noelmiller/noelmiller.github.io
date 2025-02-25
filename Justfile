@@ -39,7 +39,7 @@ post-docker:
     docker run --rm -it --volume .:/app -p 8000:8000 noelmiller.dev:latest create-post
 
 run:
-    podman run --rm -it --volume .:/app -p 8000:8000 noelmiller.dev:latest devserver
+    podman run --rm -it --volume .:/app:Z -p 8000:8000 noelmiller.dev:latest devserver
 
 run-docker:
     docker run --rm -it --volume .:/app -p 8000:8000 noelmiller.dev:latest devserver
