@@ -1,5 +1,19 @@
 Title: Media
+
+### Podcast
+
+<a href="https://podcast.fedoraproject.org">![Fedora Podcast]({static}/images/media/podcast.png)</a>
+
+Fedora Podcast is a long-running podcast that covers all things Fedora. I am a co-host on the show, and I also help with the production of the show. We have a new episode every two weeks, and we cover a wide variety of topics related to Fedora and open source.
+
+
 ### Talks
+
+[SCALE 22x - Universal Blue](https://www.youtube.com/live/_88zPDJugmY?si=tj5Jl_eK6PApcDpW&t=7697) - March 8th, 2025
+
+Starts at [2:08:17](https://www.youtube.com/live/_88zPDJugmY?si=tj5Jl_eK6PApcDpW&t=7697)
+
+{% youtube _88zPDJugmY %}
 
 [Fedora 41 Release Party](https://www.youtube.com/watch?v=u7DrkhirKKM&) - November 14th, 2024
 
