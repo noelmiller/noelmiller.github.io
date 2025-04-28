@@ -46,11 +46,39 @@ August 2023 - Present
 
 ---
 
-**Project Manager and Core Contributor**
+**Core Maintainer**
+
+[Bazzite](https://bazzite.gg)
+
+February 2023 - Present (Volunteer)
+
+- Engage with the community to understand their needs and desires for the project
+- Coordinate with other contributors to ensure that the project is moving forward
+- Develop and maintain relationships with key stakeholders in the community, Red Hat, and the Fedora Project
+- Contribute code to the project to help it meet its goals
+- Develop and deliver technical presentations and demonstrations to the community (see [here](https://noelmiller.dev/pages/media) for my media appearances)
+- Provide feedback to the project leadership on community requirements and issues
+- Contribute to the development of best practices, knowledge articles, and other technical documentation
+- Provide support to the community through forums, social media, and other channels
+
+---
+
+**Podcast Host**
+
+[Fedora Podcast](https://podcast.fedoraproject.org)
+
+April 2025 - Present (Volunteer)
+
+- Co-host the Fedora Podcast, a long-running podcast that covers all things Fedora
+- Assist with the production of the show, including editing and publishing episodes
+
+---
+
+**Core Contributor (Emeritus)**
 
 [Universal Blue](https://universal-blue.org)
 
-February 2023 - Present (Volunteer)
+February 2023 - April 2025 (Volunteer)
 
 - Engage with the community to understand their needs and desires for the project
 - Manage the project roadmap and ensure that the project is on track to meet its goals
@@ -210,11 +238,16 @@ Non-Technical Roles:
 
 #### Operating Systems
 
-| Name                       | Proficiency |
-| :------------------------- | :---------- |
-| RHEL 7 - 9                 | Experienced |
-| Ubuntu 12.04 - 24.04       | Experienced |
-| Windows Server 2008 - 2022 | Experienced |
+| Name                         | Proficiency |
+| :--------------------------- | :---------- |
+| Red Hat Enterprise Linux     | Experienced |
+| Fedora                       | Experienced |
+| CentOS                       | Experienced |
+| Ubuntu                       | Experienced |
+| Debian                       | Experienced |
+| Oracle Linux                 | Experienced |
+| Suse Linux Enterprise Server | Experienced |
+| Windows Server               | Experienced |
 
 #### Virtualization
 
@@ -225,4 +258,4 @@ Non-Technical Roles:
 | OpenShift Virtualization | Familiar    |
 | Proxmox                  | Experienced |
 | QEMU                     | Experienced |
-| VMware ESXi 5 - 8        | Experienced |
+| VMware ESXi              | Experienced |
