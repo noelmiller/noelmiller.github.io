@@ -16,11 +16,7 @@ I have been working in IT for about 10 years now. I have gained most of my exper
 
 ##### What am I interested in?
 
-- Atomic Linux Distributions
-    - [Universal Blue](https://universal-blue.org/)
-    - [Fedora Silverblue](https://fedoraproject.org/silverblue/)
-    - [Fedora CoreOS](https://fedoraproject.org/coreos/)
-    - [Image Mode for RHEL](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux/image-mode)
+- [Bazzite](https://bazzite.gg)
 - Ansible
 - Containers
 - OpenShift (Kubernetes)

@@ -2,11 +2,7 @@ Title: Projects
 
 #### [Bazzite](https://bazzite.gg)
 
-- Description: I am a core contributor of the project! I assist with project management related tasks, as well as assisting with contributions and giving talks!
-
-#### [Universal Blue](https://universal-blue.org)
-
-- Description: I am a core contributor of the project! I assist with project management related tasks, as well as assisting with contributions and giving talks!
+- Description: I am a core contributor on Bazzite! I assist with contributions and give talks!
 
 #### [Isengard](https://github.com/noelmiller/isengard)
 
