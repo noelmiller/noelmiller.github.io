@@ -18,7 +18,7 @@ python-editor==1.0.4
 python-slugify==8.0.4
 pytz==2025.1
 readchar==4.2.1
-rich==13.9.4
+rich==14.0.0
 six==1.17.0
 smartypants==2.0.1
 text-unidecode==1.3
