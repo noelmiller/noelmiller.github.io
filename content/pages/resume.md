@@ -26,7 +26,7 @@ I am a strong proponent of continuous learning to keep my skills sharp in an eve
 
 ---
 
-**Cleared Maintenance Engineer (CME) Ansible Technical Account Manager (TAM)**
+**Ansible Dedicated Operations Technical Account Manager**
 
 [Red Hat](https://www.redhat.com)
 
