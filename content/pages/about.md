@@ -6,17 +6,18 @@ Hello, my name is Noel Miller! This is my personal blog, where I will be writing
 
 ### What is my day job?
 
-I currently work for [Red Hat](https://www.redhat.com/en) as a Cleared Maintenance Engineer (CME) Technical Account Manager (TAM). It's a bit of a mouthful; it's easiest to shorten my title to CME TAM, or Senior Consultant. My primary focus in my day job is helping my customers with anything related to Red Hat Enterprise Linux or the Ansible Automation Platform. See my [LinkedIn](https://www.linkedin.com/in/noel-miller-533909113/) for my full resume.
+I currently work for [Red Hat](https://www.redhat.com/en) as a Dedicated Operations Technical Account Manager (TAM). My primary focus in my day job is helping my customers with anything related to Red Hat Enterprise Linux or the Ansible Automation Platform. See my [LinkedIn](https://www.linkedin.com/in/noel-miller-533909113/) for my full resume.
 
 ### Professional Interests
 
 #### Information Technology
 
-I have been working in IT for about 10 years now. I have gained most of my experience through working at various Managed Service Providers. Not only that, but I have been a Linux user since 2012, and my favorite distribution is Fedora. Though my preference is Fedora, I have used Ubuntu, Debian, openSUSE, Arch Linux, Solus, and many other distros as a daily driver.
+I have been working in IT for about 10 years now. I have gained most of my experience through working at various Managed Service Providers. Not only that, but I have been a Linux user since 2012, and my favorite distribution is Fedora. Though my preference is Fedora, I have used Ubuntu, Debian, openSUSE, Arch Linux, Solus, and many other linux distributions as a daily driver.
 
 ##### What am I interested in?
 
 - [Bazzite](https://bazzite.gg)
+- Fedora Linux
 - Ansible
 - Containers
 - OpenShift (Kubernetes)
@@ -33,10 +34,9 @@ I have been playing video games since I was a young kid. I primarily play games 
 
 ##### What am I playing?
 
-- Final Fantasy XIV (playing through Dawntrail currently)
+- Elden Ring: Nightreign
 - Final Fantasy XVI
 - Deadlock
-- Bloodborne
 
 ##### Favorite Games of All Time
 
