@@ -18,7 +18,6 @@ I have been working in IT for about 10 years now. I have gained most of my exper
 
 - [Bazzite](https://bazzite.gg)
 - Fedora Linux
-- Ansible
 - Containers
 - OpenShift (Kubernetes)
 
@@ -35,14 +34,14 @@ I have been playing video games since I was a young kid. I primarily play games 
 ##### What am I playing?
 
 - Elden Ring: Nightreign
-- Final Fantasy XVI
+- Final Fantasy XIV
 - Deadlock
 
 ##### Favorite Games of All Time
 
 1. Halo 2
 2. Super Smash Brothers Melee
-3. Bloodborne
+3. Deadlock
 4. Dark Souls 3
 5. Elden Ring
 
