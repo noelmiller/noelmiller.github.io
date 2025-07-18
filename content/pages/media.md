@@ -6,8 +6,13 @@ Title: Media
 
 Fedora Podcast is a long-running podcast that covers all things Fedora. I am a co-host on the show, and I also help with the production of the show. We have a new episode every two weeks, and we cover a wide variety of topics related to Fedora and open source.
 
-
 ### Talks
+
+[Flock to Fedora](https://www.youtube.com/live/RSV1bVhRc8k?si=AnSdumAUGK9CZl9K&t=10519) - June 5th, 2025
+
+Starts at [2:55:19](https://www.youtube.com/live/RSV1bVhRc8k?si=AnSdumAUGK9CZl9K&t=10519)
+
+{% youtube RSV1bVhRc8k %}
 
 [SCALE 22x - Universal Blue](https://www.youtube.com/live/_88zPDJugmY?si=tj5Jl_eK6PApcDpW&t=7697) - March 8th, 2025
 
