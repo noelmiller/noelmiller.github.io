@@ -33,8 +33,8 @@ I have been playing video games since I was a young kid. I primarily play games 
 
 ##### What am I playing?
 
-- Elden Ring: Nightreign
-- Final Fantasy XIV
+- Warframe
+- Osu
 - Deadlock
 
 ##### Favorite Games of All Time
