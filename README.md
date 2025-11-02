@@ -5,6 +5,8 @@ I designed the theme using [pico.css](https://picocss.com/), [font-awesome](http
 
 I host the site right [here](https://noelmiller.dev) on GitHub pages.
 
+[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com)
+
 # Run Locally
 
 To run the site locally, you will want to have podman installed.
