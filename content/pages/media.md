@@ -1,11 +1,5 @@
 Title: Media
 
-### Podcast
-
-<a href="https://podcast.fedoraproject.org">![Fedora Podcast]({static}/images/media/podcast.png)</a>
-
-Fedora Podcast is a long-running podcast that covers all things Fedora. I am a co-host on the show, and I also help with the production of the show. We have a new episode every two weeks, and we cover a wide variety of topics related to Fedora and open source.
-
 ### Talks
 
 [Flock to Fedora](https://www.youtube.com/live/RSV1bVhRc8k?si=AnSdumAUGK9CZl9K&t=10519) - June 5th, 2025

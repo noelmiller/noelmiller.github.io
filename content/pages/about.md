@@ -17,9 +17,8 @@ I have been working in IT for about 10 years now. I have gained most of my exper
 ##### What am I interested in?
 
 - [Bazzite](https://bazzite.gg)
-- Fedora Linux
-- Containers
-- OpenShift (Kubernetes)
+- [Fedora](https://fedoraproject.org)
+- [Kubernetes](https://kubernetes.io)
 
 #### Programming
 
