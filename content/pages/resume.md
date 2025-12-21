@@ -67,7 +67,7 @@ February 2023 - Present (Volunteer)
 
 [Fedora Podcast](https://podcast.fedoraproject.org)
 
-April 2025 - Present (Volunteer)
+April 2025 - November 2025 (Volunteer)
 
 - Co-host the Fedora Podcast, a long-running podcast that covers all things Fedora
 - Assist with the production of the show, including editing and publishing episodes
