@@ -9,8 +9,8 @@ VOLUME /app
 USER root
 
 RUN apk update \
-    && apk upgrade \
-    && apk add make \
-    && pip install -r requirements.txt
+  && apk upgrade \
+  && apk add make \
+  && pip install -r requirements.txt
 
 ENTRYPOINT ["make"]
