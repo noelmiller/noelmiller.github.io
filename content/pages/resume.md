@@ -1,5 +1,6 @@
 # Noel Miller
 
+<!--- 
 **IT Consultant**
 
 Email: [INSERT EMAIL HERE]
@@ -7,6 +8,7 @@ Email: [INSERT EMAIL HERE]
 Phone: [INSERT PHONE NUMBER HERE]
 
 [LinkedIn](https://www.linkedin.com/in/noel-miller-533909113/) | [GitHub](https://github.com/noelmiller) | [Blog](https://noelmiller.dev)
+-->
 
 ### Introduction
 
