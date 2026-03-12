@@ -1,6 +1,8 @@
+Title: Resume
+
+<!--
 # Noel Miller
 
-<!--- 
 **IT Consultant**
 
 Email: [INSERT EMAIL HERE]
