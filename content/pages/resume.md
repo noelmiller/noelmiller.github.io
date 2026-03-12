@@ -1,6 +1,6 @@
 Title: Resume
 
-<!--
+<!---
 # Noel Miller
 
 **IT Consultant**
