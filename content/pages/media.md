@@ -2,6 +2,10 @@ Title: Media
 
 ### Talks
 
+[SCALE 23x - Bazzite](https://youtu.be/dhVXEa7tBX0?si=iLEFKJc4ZhESy7Nu) - March 7th, 2026
+
+{% youtube dhVXEa7tBX0 %}
+
 [Flock to Fedora](https://www.youtube.com/live/RSV1bVhRc8k?si=AnSdumAUGK9CZl9K&t=10519) - June 5th, 2025
 
 Starts at [2:55:19](https://www.youtube.com/live/RSV1bVhRc8k?si=AnSdumAUGK9CZl9K&t=10519)

@@ -1,6 +1,3 @@
-Title: Resume
-
-<!---
 # Noel Miller
 
 **IT Consultant**
@@ -10,7 +7,6 @@ Email: [INSERT EMAIL HERE]
 Phone: [INSERT PHONE NUMBER HERE]
 
 [LinkedIn](https://www.linkedin.com/in/noel-miller-533909113/) | [GitHub](https://github.com/noelmiller) | [Blog](https://noelmiller.dev)
--->
 
 ### Introduction
 
@@ -74,11 +70,11 @@ April 2025 - November 2025 (Volunteer)
 
 ---
 
-**Core Contributor (Emeritus)**
+**Core Contributor**
 
 [Universal Blue](https://universal-blue.org)
 
-February 2023 - April 2025 (Volunteer)
+February 2023 - Present (Volunteer)
 
 - Engage with the community to understand their needs and desires for the project
 - Manage the project roadmap and ensure that the project is on track to meet its goals
@@ -219,8 +215,8 @@ Non-Technical Roles:
 | Bash        | Experienced  |
 | Docker      | Experienced  |
 | Git         | Experienced  |
-| Kubernetes  | Intermediate |
-| OpenShift   | Familiar     |
+| Kubernetes  | Experienced  |
+| OpenShift   | Experienced  |
 | Podman      | Experienced  |
 | PowerShell  | Experienced  |
 | Python      | Intermediate |
@@ -255,7 +251,7 @@ Non-Technical Roles:
 | :----------------------- | :---------- |
 | Hyper-V                  | Experienced |
 | KVM                      | Experienced |
-| OpenShift Virtualization | Familiar    |
+| OpenShift Virtualization | Experienced |
 | Proxmox                  | Experienced |
 | QEMU                     | Experienced |
 | VMware ESXi              | Experienced |
