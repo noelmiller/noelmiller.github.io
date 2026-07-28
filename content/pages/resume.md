@@ -66,7 +66,7 @@ April 2025 - November 2025 (Volunteer)
 
 [Universal Blue](https://universal-blue.org)
 
-February 2023 - 2026 (Volunteer)
+February 2023 - July 2026 (Volunteer)
 
 - Engage with the community to understand their needs and desires for the project
 - Manage the project roadmap and ensure that the project is on track to meet its goals
