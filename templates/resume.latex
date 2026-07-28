@@ -1,0 +1,85 @@
+\documentclass[10pt,letterpaper]{extarticle}
+
+% ---- Page geometry ----
+\usepackage[margin=0.6in,top=0.5in,bottom=0.55in]{geometry}
+
+% ---- Fonts (TeX Gyre Heros = metric-compatible Helvetica, works with pdflatex) ----
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tgheros}
+\renewcommand{\familydefault}{\sfdefault}
+
+% ---- Color ----
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{1F6F8B}
+\definecolor{muted}{HTML}{5A5A5A}
+
+% ---- Links ----
+\usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent, breaklinks=true}
+
+% ---- Section styling ----
+\usepackage{titlesec}
+
+% Level 1 (#) - the name banner, used once at the top of the document
+\titleformat{\section}
+  {\flushleft\fontsize{22}{24}\selectfont\bfseries\color{accent}}
+  {}{0em}{}
+\titlespacing*{\section}{0pt}{0pt}{2pt}
+
+% Level 3 (###) - main resume sections: Introduction, Experience, Technical Proficiencies
+\titleformat{\subsubsection}
+  {\flushleft\large\bfseries\color{accent}}
+  {}{0em}
+  {\uppercase}
+  [{\titlerule[0.8pt]}]
+\titlespacing*{\subsubsection}{0pt}{13pt}{5pt}
+
+% Level 4 (####) - sub-groups: Certifications, Cloud, Programming, Networking, ...
+% [block] overrides \paragraph's default run-in shape, which otherwise runs the
+% heading into whatever follows (e.g. shoving a table sideways).
+\titleformat{\paragraph}[block]
+  {\flushleft\normalsize\bfseries\color{muted}}
+  {}{0em}{}
+\titlespacing*{\paragraph}{0pt}{9pt}{3pt}
+
+% ---- Paragraph spacing (tight, resume-style) ----
+\usepackage{parskip}
+\setlength{\parskip}{2.5pt}
+\setlength{\parindent}{0pt}
+
+% ---- Lists ----
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=1.3em, itemsep=1pt, topsep=2pt, parsep=0pt, partopsep=0pt, label=\textbullet}
+
+% ---- Bold text carries the accent color (job titles, labels, tagline) ----
+\let\oldtextbf\textbf
+\renewcommand{\textbf}[1]{{\color{accent}\oldtextbf{#1}}}
+
+% ---- Tables (proficiency tables) ----
+\usepackage{longtable,booktabs,array}
+\makeatletter
+\@ifundefined{c@none}{\newcounter{none}}{}
+\makeatother
+\renewcommand{\arraystretch}{1.2}
+\setlength{\LTpre}{4pt}
+\setlength{\LTpost}{4pt}
+% longtable centers itself by default (\LTleft/\LTright both default to \fill) - force flush left instead
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{\fill}
+
+% ---- Footer: just a quiet page number ----
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\small\color{muted}\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\sloppy
+
+\begin{document}
+$body$
+\end{document}

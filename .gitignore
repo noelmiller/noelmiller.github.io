@@ -161,3 +161,4 @@ cython_debug/
 
 # Removes local testing directory
 output/
+resume.pdf
