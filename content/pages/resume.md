@@ -1,15 +1,11 @@
 Title: Resume
 
-<!---
+<!--
 # Noel Miller
 
 **IT Consultant**
 
-Email: [INSERT EMAIL HERE]
-
-Phone: [INSERT PHONE NUMBER HERE]
-
-[LinkedIn](https://www.linkedin.com/in/noel-miller-533909113/) | [GitHub](https://github.com/noelmiller) | [Blog](https://noelmiller.dev)
+noel@noelmiller.dev | [Insert Phone Number Here] | [LinkedIn](https://www.linkedin.com/in/noel-miller-533909113/) | [GitHub](https://github.com/noelmiller) | [Blog](https://noelmiller.dev)
 -->
 
 ### Introduction
@@ -24,9 +20,7 @@ I am a strong proponent of continuous learning to keep my skills sharp in an eve
 
 ### Experience
 
----
-
-**Ansible Dedicated Operations Technical Account Manager**
+**Dedicated Operations Technical Account Manager**
 
 [Red Hat](https://www.redhat.com)
 
@@ -42,15 +36,13 @@ August 2023 - Present
 - Contribute to the development of best practices, knowledge articles, and other technical documentation
 - Participate in the development and delivery of training and enablement programs for customers and partners
 - Contribute to the development and execution of customer success plans
-- Hands-on support with clients to help them implement the Ansible Automation Platform and other Red Hat solutions
-
----
+- Hands-on support with clients to help them implement the Ansible Automation Platform, Red Hat IDM, Red Hat Openshift, and RHEL Platform
 
 **Core Maintainer**
 
 [Bazzite](https://bazzite.gg)
 
-February 2023 - Present (Volunteer)
+February 2023 - July 2026 (Volunteer)
 
 - Engage with the community to understand their needs and desires for the project
 - Coordinate with other contributors to ensure that the project is moving forward
@@ -61,8 +53,6 @@ February 2023 - Present (Volunteer)
 - Contribute to the development of best practices, knowledge articles, and other technical documentation
 - Provide support to the community through forums, social media, and other channels
 
----
-
 **Podcast Host**
 
 [Fedora Podcast](https://podcast.fedoraproject.org)
@@ -72,13 +62,11 @@ April 2025 - November 2025 (Volunteer)
 - Co-host the Fedora Podcast, a long-running podcast that covers all things Fedora
 - Assist with the production of the show, including editing and publishing episodes
 
----
-
 **Core Contributor**
 
 [Universal Blue](https://universal-blue.org)
 
-February 2023 - Present (Volunteer)
+February 2023 - July 2026 (Volunteer)
 
 - Engage with the community to understand their needs and desires for the project
 - Manage the project roadmap and ensure that the project is on track to meet its goals
@@ -88,8 +76,6 @@ February 2023 - Present (Volunteer)
 - Develop and deliver technical presentations and demonstrations to the community (see [here](https://noelmiller.dev/pages/media) for my media appearances)
 - Provide feedback to the project leadership on community requirements and issues
 - Contribute to the development of best practices, knowledge articles, and other technical documentation
-
----
 
 **Systems Engineer**
 
@@ -105,8 +91,6 @@ July 2022 - August 2023
 - Assisted with processes surrounding Azure DevOps to start building pipelines and processes for infrastructure deployments
 - Executed the migration of several workloads from Oracle Linux 7 to RHEL 8
 
----
-
 **Systems Administrator**
 
 [Whizkids Tech](https://whizkids.tech)
@@ -121,8 +105,6 @@ August 2021 - July 2022
 - Create PowerShell and ConnectWise Automate scripts to automate the deployment of software on workstations and servers
 - Configure, deploy, and manage Storagecraft backup solutions (both local and cloud)
 
----
-
 **IT Consultant**
 
 [Inside Edge Commercial Interior Services](https://iecis.com/)
@@ -133,8 +115,6 @@ December 2020 - August 2021
 - Document work inside Jira for issues worked
 - Write documentation for manual processes
 - Provided expertise and suggestions for projects and other changes needed to keep infrastructure up to date and secure
-
----
 
 **Service Reliability Engineer**
 
@@ -147,8 +127,6 @@ September 2020 - December 2020
 - Write documentation for manual processes
 - Work with the team on custom software implementations with the development team
 - Utilize version control (Git) to document scripts and fix bugs in scripts
-
----
 
 **Managed Linux Server Engineer**
 
@@ -163,8 +141,6 @@ November 2019 - September 2020
 - Assist with other client environments as needed (Windows or Linux)
 - Collaborate with other departments, including account management, to ensure we provide excellent service
 - Document troubleshooting processes to ensure we have a good baseline for automation and for assisting lower level engineers with troubleshooting
-
----
 
 **Systems Engineer**
 
