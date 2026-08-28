@@ -14,13 +14,13 @@ To run the site locally, you will want to have podman installed.
 Build the container to run the site:
 
 ```bash
-make build
+just build
 ```
 
 And run the container:
 
 ```bash
-make run
+just run
 ```
 
 You can now view the site at [http://localhost:8000](http://localhost:8000).
@@ -30,5 +30,5 @@ You can use `make clean` to remove the output directory and `make run` to start 
 To make a post using the template, run:
 
 ```bash
-make post
+just post
 ```
