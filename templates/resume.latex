@@ -3,10 +3,10 @@
 % ---- Page geometry ----
 \usepackage[margin=0.6in,top=0.5in,bottom=0.55in]{geometry}
 
-% ---- Fonts (TeX Gyre Heros = metric-compatible Helvetica, works with pdflatex) ----
+% ---- Fonts (Latin Modern is included with base TeX Live) ----
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{tgheros}
+\usepackage{lmodern}
 \renewcommand{\familydefault}{\sfdefault}
 
 % ---- Color ----
@@ -19,29 +19,15 @@
 \hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent, breaklinks=true}
 
 % ---- Section styling ----
-\usepackage{titlesec}
-
-% Level 1 (#) - the name banner, used once at the top of the document
-\titleformat{\section}
-  {\flushleft\fontsize{22}{24}\selectfont\bfseries\color{accent}}
-  {}{0em}{}
-\titlespacing*{\section}{0pt}{0pt}{2pt}
-
-% Level 3 (###) - main resume sections: Introduction, Experience, Technical Proficiencies
-\titleformat{\subsubsection}
-  {\flushleft\large\bfseries\color{accent}}
-  {}{0em}
-  {\uppercase}
-  [{\titlerule[0.8pt]}]
-\titlespacing*{\subsubsection}{0pt}{13pt}{5pt}
-
-% Level 4 (####) - sub-groups: Certifications, Cloud, Programming, Networking, ...
-% [block] overrides \paragraph's default run-in shape, which otherwise runs the
-% heading into whatever follows (e.g. shoving a table sideways).
-\titleformat{\paragraph}[block]
-  {\flushleft\normalsize\bfseries\color{muted}}
-  {}{0em}{}
-\titlespacing*{\paragraph}{0pt}{9pt}{3pt}
+\setcounter{secnumdepth}{0}
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0pt}
+  {0pt}{2pt}{\fontsize{22}{24}\selectfont\bfseries\color{accent}}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0pt}
+  {13pt}{5pt}{\large\bfseries\color{accent}}}
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0pt}
+  {9pt}{3pt}{\normalsize\bfseries\color{muted}}}
+\makeatother
 
 % ---- Paragraph spacing (tight, resume-style) ----
 \usepackage{parskip}
@@ -49,8 +35,11 @@
 \setlength{\parindent}{0pt}
 
 % ---- Lists ----
-\usepackage{enumitem}
-\setlist[itemize]{leftmargin=1.3em, itemsep=1pt, topsep=2pt, parsep=0pt, partopsep=0pt, label=\textbullet}
+\setlength{\leftmargini}{1.3em}
+\setlength{\itemsep}{1pt}
+\setlength{\topsep}{2pt}
+\setlength{\parsep}{0pt}
+\setlength{\partopsep}{0pt}
 
 % ---- Bold text carries the accent color (job titles, labels, tagline) ----
 \let\oldtextbf\textbf

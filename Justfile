@@ -51,7 +51,7 @@ create-post:
     python create_post.py
 
 resume:
-    read -p "Phone number: " phone; sed -e '1d' -e 's/<!--//' -e 's/-->//' -e "s/\[Insert Phone Number Here\]/$phone/" content/pages/resume.md | pandoc --from markdown --template=templates/resume.latex --pdf-engine=pdflatex -o resume.pdf
+    PATH="/Library/TeX/texbin:$PATH"; read -p "Phone number: " phone; sed -e '1d' -e 's/<!--//' -e 's/-->//' -e "s/\[Insert Phone Number Here\]/$phone/" content/pages/resume.md | pandoc --from markdown --template=templates/resume.latex --pdf-engine=pdflatex -o resume.pdf
 
 devserver:
     "{{PELICAN}}" -lr "{{INPUTDIR}}" -o "{{OUTPUTDIR}}" -s "{{CONFFILE}}" -b 0.0.0.0 {{PELICANOPTS}}
