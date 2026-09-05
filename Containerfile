@@ -10,7 +10,7 @@ USER root
 
 RUN apk update \
   && apk upgrade \
-  && apk add make \
+  && apk add just \
   && pip install -r requirements.txt
 
-ENTRYPOINT ["make"]
+ENTRYPOINT ["just"]
