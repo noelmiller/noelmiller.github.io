@@ -15,10 +15,13 @@ help:
     @echo "Justfile for a pelican Web site and podman commands"
     @echo ""
     @echo "Usage (Outside the Container):"
-    @echo "  just build           Build a dev container"
+    @echo "  just build           Build a dev container with docker"
+    @echo "  just build-podman    Build a dev container with podman"
     @echo "  just clean           Remove generated files"
     @echo "  just post            Run container to create a post"
+    @echo "  just post-podman     Run container to create a post with podman"
     @echo "  just run             Run container with devserver"
+    @echo "  just run-podman      Run container with devserver using podman"
     @echo "  just resume          Export the resume page to a PDF via pandoc"
     @echo ""
     @echo "Usage (Inside the Container):"
@@ -26,25 +29,25 @@ help:
     @echo "  just devserver       Serve/regenerate site"
     @echo ""
 
-build:
+build-podman:
     podman build -t noelmiller.dev:latest .
 
-build-docker:
+build:
     docker build -f Containerfile -t noelmiller.dev:latest .
 
 clean:
     [ ! -d "{{OUTPUTDIR}}" ] || rm -rf "{{OUTPUTDIR}}"
 
-post:
+post-podman:
     podman run --rm -it --volume "$(pwd):/app:Z" -p 8000:8000 noelmiller.dev:latest create-post
 
-post-docker:
+post:
     docker run --rm -it --volume "$(pwd):/app" -p 8000:8000 noelmiller.dev:latest create-post
 
-run:
-    -podman run --init --rm -it --volume "$(pwd):/app:Z" -p 8000:8000 noelmiller.dev:latest devserver
+run-podman:
+    podman run --init --rm -it --volume "$(pwd):/app:Z" -p 8000:8000 noelmiller.dev:latest devserver
 
-run-docker:
+run:
     docker run --init --rm -it --volume "$(pwd):/app" -p 8000:8000 noelmiller.dev:latest devserver
 
 create-post:
