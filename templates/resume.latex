@@ -1,7 +1,10 @@
 \documentclass[10pt,letterpaper]{extarticle}
 
+% Layout macros below (\resumeheader, \resumeentry, ...) are emitted by templates/resume.lua.
+% Only packages that ship with BasicTeX are used.
+
 % ---- Page geometry ----
-\usepackage[margin=0.6in,top=0.5in,bottom=0.55in]{geometry}
+\usepackage[margin=0.6in,top=0.5in,bottom=0.65in,footskip=0.35in]{geometry}
 
 % ---- Fonts (Latin Modern is included with base TeX Live) ----
 \usepackage[T1]{fontenc}
@@ -12,40 +15,98 @@
 % ---- Color ----
 \usepackage{xcolor}
 \definecolor{accent}{HTML}{1F6F8B}
-\definecolor{muted}{HTML}{5A5A5A}
+\definecolor{ink}{HTML}{222222}
+\definecolor{muted}{HTML}{5F6B73}
+\definecolor{hairline}{HTML}{D5DDE1}
+\color{ink}
 
 % ---- Links ----
 \usepackage[hidelinks]{hyperref}
 \hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent, breaklinks=true}
 
-% ---- Section styling ----
-\setcounter{secnumdepth}{0}
-\makeatletter
-\renewcommand{\section}{\@startsection{section}{1}{0pt}
-  {0pt}{2pt}{\fontsize{22}{24}\selectfont\bfseries\color{accent}}}
-\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0pt}
-  {13pt}{5pt}{\large\bfseries\color{accent}}}
-\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0pt}
-  {9pt}{3pt}{\normalsize\bfseries\color{muted}}}
-\makeatother
-
-% ---- Paragraph spacing (tight, resume-style) ----
+% ---- Paragraphs: ragged right, never hyphenated (cleaner to read and to copy/parse) ----
+\raggedright
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
 \usepackage{parskip}
-\setlength{\parskip}{2.5pt}
+\setlength{\parskip}{3pt}
 \setlength{\parindent}{0pt}
+\setcounter{secnumdepth}{0}
 
-% ---- Lists ----
-\setlength{\leftmargini}{1.3em}
-\setlength{\itemsep}{1pt}
-\setlength{\topsep}{2pt}
-\setlength{\parsep}{0pt}
-\setlength{\partopsep}{0pt}
+% ---- Lists: tight, with a small accent bullet ----
+\setlength{\leftmargini}{1.15em}
+\makeatletter
+\def\@listi{\leftmargin\leftmargini \topsep 1pt \partopsep 0pt \parsep 0pt \itemsep 1pt}
+\let\@listI\@listi
+\makeatother
+\renewcommand{\labelitemi}{\color{accent}\raisebox{0.25ex}{\scriptsize\textbullet}}
+\providecommand{\tightlist}{}
+\renewcommand{\tightlist}{\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}}
 
-% ---- Bold text carries the accent color (job titles, labels, tagline) ----
-\let\oldtextbf\textbf
-\renewcommand{\textbf}[1]{{\color{accent}\oldtextbf{#1}}}
+% ---- Keep a heading together with what follows it ----
+\newcommand{\needspace}[1]{\par
+  \ifdim\pagegoal<\maxdimen
+    \begingroup\dimen0=\pagegoal \advance\dimen0 by -\pagetotal
+    \ifdim\dimen0<#1\relax\newpage\fi\endgroup
+  \fi}
 
-% ---- Tables (proficiency tables) ----
+% ---- Header: name and tagline on the left, contact details on the right ----
+\newcommand{\contactsep}{\hspace{0.5em}{\color{hairline}\textbar}\hspace{0.5em}}
+\newcommand{\resumename}{}
+\newcommand{\resumeheader}[4]{%
+  \gdef\resumename{#1}%
+  \hypersetup{pdftitle={#1 - Resume}, pdfauthor={#1}}%
+  \noindent
+  \begin{minipage}[b]{0.56\textwidth}\raggedright
+    {\fontsize{27}{30}\selectfont\bfseries\color{accent}#1}\par\vspace{3pt}
+    {\normalsize\color{muted}\MakeUppercase{#2}}
+  \end{minipage}\hfill
+  \begin{minipage}[b]{0.43\textwidth}\raggedleft\small
+    #3\par\vspace{1pt}#4
+  \end{minipage}\par
+  \vspace{5pt}
+  \noindent{\color{accent}\rule{\textwidth}{1.6pt}}\par
+  \vspace{-2pt}}
+
+% ---- Section heading: caps over a hairline ----
+\newcommand{\resumesection}[2]{%
+  \needspace{5\baselineskip}\vspace{9pt}%
+  \pdfbookmark[1]{#1}{#2}%
+  \noindent{\large\bfseries\color{accent}\MakeUppercase{#1}}\par\nopagebreak
+  \vspace{-7pt}\noindent{\color{hairline}\rule{\textwidth}{0.8pt}}\par\nopagebreak
+  \vspace{1pt}}
+
+\newcommand{\resumesubsection}[1]{%
+  \needspace{3\baselineskip}\vspace{5pt}%
+  \noindent{\bfseries\color{ink}#1}\par\nopagebreak\vspace{1pt}}
+
+% ---- Experience entry: title and dates on one line, employer beneath ----
+\newcommand{\resumeentry}[3]{%
+  \needspace{7\baselineskip}\vspace{7pt}%
+  \noindent{\large\bfseries\color{ink}#1}\hfill{\small\color{muted}#3}\par\nopagebreak
+  \vspace{-2pt}\noindent{\color{accent}#2}\par\nopagebreak
+  \vspace{1pt}}
+
+% ---- "Technical Duties:" style label ahead of a list ----
+\newcommand{\resumelabel}[1]{%
+  \needspace{3\baselineskip}\vspace{3pt}%
+  \noindent{\small\bfseries\color{muted}#1}\par\nopagebreak}
+
+% ---- A bullet list split into two side-by-side columns (certifications) ----
+\newenvironment{listcolumnleft}{\par\noindent\begin{minipage}[t]{0.57\textwidth}\raggedright\small}{\end{minipage}\hfill\ignorespaces}
+\newenvironment{listcolumnright}{\begin{minipage}[t]{0.42\textwidth}\raggedright\small}{\end{minipage}\par}
+
+% ---- Skills grid: proficiency tables laid out side by side ----
+\newenvironment{skillsgrid}{\par\vspace{7pt}\noindent\ignorespaces}{\par}
+\newenvironment{skillscolumn}{\begin{minipage}[t]{0.318\textwidth}\raggedright\small\setlength{\parskip}{0pt}}{\end{minipage}}
+\newcommand{\skillgroup}[1]{%
+  \vspace{7pt}\noindent{\bfseries\color{ink}#1}\par
+  \vspace{-5pt}\noindent{\color{accent}\rule{\linewidth}{0.8pt}}\par\vspace{2pt}}
+\newcommand{\skillrow}[2]{%
+  \noindent\strut#1\hfill{\footnotesize\color{muted}#2}\par
+  \nointerlineskip\vspace{1.5pt}{\color{hairline}\hrule height 0.4pt}\vspace{1.5pt}}
+
+% ---- Tables (fallback for any table the filter does not turn into the skills grid) ----
 \usepackage{longtable,booktabs,array}
 \makeatletter
 \@ifundefined{c@none}{\newcounter{none}}{}
@@ -53,21 +114,20 @@
 \renewcommand{\arraystretch}{1.2}
 \setlength{\LTpre}{4pt}
 \setlength{\LTpost}{4pt}
-% longtable centers itself by default (\LTleft/\LTright both default to \fill) - force flush left instead
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{\fill}
 
-% ---- Footer: just a quiet page number ----
+% ---- Footer: name on the left, page x of y on the right ----
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyfoot[C]{\small\color{muted}\thepage}
+\fancyfoot[L]{\footnotesize\color{muted}\MakeUppercase{\resumename}}
+\fancyfoot[R]{\footnotesize\color{muted}\thepage\ / \pageref*{resume:lastpage}}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+\AtEndDocument{\label{resume:lastpage}}
 
 \setlength{\emergencystretch}{3em}
-\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\sloppy
 
 \begin{document}
 $body$
